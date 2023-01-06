@@ -1,0 +1,327 @@
+,MO code,MO description,count
+0,3101,T/C - PCF (A) In the Narrative,417166
+1,3401,T/C - Type of Collision,341282
+2,3701,T/C - Movement Preceding Collision,341272
+3,3004,T/C - Veh vs Veh,246991
+4,3037,T/C - At Intersection - No,223697
+5,3030,T/C - Hit and Run Misd,190534
+6,3028,T/C - (N) Non Injury,158051
+7,3026,T/C - (C) Complaint of Injury,136697
+8,3036,T/C - At Intersection - Yes,119135
+9,3006,T/C - Veh vs Parked Veh,107648
+10,3035,T/C - City Property Involved - No,100678
+11,4026,T/C - Valley Traffic (VTD),83453
+12,0605,Traffic Accident/Traffic related incident,71100
+13,3025,T/C - (B) Visible Injury,61990
+14,4027,T/C - West Traffic (WTD),60853
+15,3034,T/C - City Property Involved - Yes,60725
+16,3029,T/C - Hit and Run Fel,43661
+17,4025,T/C - South Traffic (STD),36126
+18,3003,T/C - Veh vs Ped,31506
+19,3011,T/C - Veh vs Fixed Object,31275
+20,3102,T/C - PCF (B) Other Improper Driving,20796
+21,3032,T/C - Private Property - Yes,18559
+22,3008,T/C - Veh vs Bike,18083
+23,3602,T/C - Unlicensed motorist,13632
+24,1501,Other MO (see rpt),12353
+25,3024,T/C - (A) Severe Injury,11457
+26,4020,T/C - Olympic,10820
+27,4008,T/C - West Los Angeles,10374
+28,4014,T/C - Pacific,10273
+29,4006,T/C- Hollywood,10267
+30,4012,T/C - 77th,10183
+31,4015,T/C - North Hollywood,9241
+32,1300,Vehicle involved,9128
+33,4010,T/C - West Valley,9038
+34,4017,T/C - Devonshire,8713
+35,4009,T/C - Van Nuys,7884
+36,4021,T/C - Topanga,7708
+37,4003,T/C - Southwest,7663
+38,3009,T/C - Veh vs M/C,7086
+39,4007,T/C - Wilshire,6647
+40,4016,T/C - Foothill,6319
+41,4019,T/C - Mission,6238
+42,3104,T/C - PCF (D) Unk,5959
+43,4024,T/C - Central Traffic (CTD),5539
+44,4018,T/C - Southeast,5509
+45,3002,T/C - Officer Involved T/C,5142
+46,4005,T/C - Harbor,4942
+47,1402,Evidence Booked (any crime),3871
+48,3039,T/C - DUI Misdemeanor,3384
+49,3033,T/C - Private Property - No,3157
+50,3103,T/C - PCF (C) Other Than Driver,3062
+51,3027,T/C - (K) Fatal Injury,2345
+52,3801,T/C - Sobriety,2290
+53,0110,Involved in traffic/accident,1476
+54,3038,T/C - DUI Felony,1430
+55,3016,T/C - Bike vs Veh,1410
+56,3012,T/C - Veh vs Other Object,1369
+57,1218,Victim was Homeless/Transient,994
+58,0101,Aid victim,963
+59,0506,Forced to masturbate suspect,951
+60,4002,T/C - Rampart,707
+61,4011,T/C - Northeast,693
+62,4013,T/C - Newton,683
+63,3501,T/C - Ped Actions,571
+64,3013,T/C - M/C vs Veh,532
+65,3005,T/C - Veh vs Veh on other roadway,505
+66,4004,T/C - Hollenbeck,500
+67,3001,T/C - Veh vs Non-collision,381
+68,4001,T/C - Central,378
+69,3015,T/C - M/C vs Other,369
+70,3601,T/C - Special Information and Other,341
+71,3014,T/C - M/C vs Fixed Object,335
+72,2004,Suspect is homeless/transient,314
+73,3018,T/C - Bike vs Other,287
+74,3010,T/C - Veh vs Animal,248
+75,2002,Suspect intoxicated/drunk,238
+76,0910,"Public Transit (Metrolink/Train Station,Metro Rail Red,Line Subway Station, Metro Rail Blue Line Station,adjacent transit parking lots, tracks or tunnels MTA(RTD), and other municipal lines.",232
+77,1309,Susp uses vehicle,217
+78,1414,Photographs,162
+79,0907,Narcotics (Buy-Sell-Rip),159
+80,3603,T/C - Bicyclists colliding into opened vehicle door,159
+81,3007,T/C - Veh vs Train,154
+82,1202,Aged (60 & over) or blind/crippled/unable to care for self,152
+83,0906,Gangs,134
+84,1223,Riding bike,123
+85,0344,Removes vict property,89
+86,1822,Stranger,87
+87,0416,Hit-Hit w/ weapon,80
+88,3022,T/C - Train vs Ped,78
+89,1407,Bullets/Casings,75
+90,1419,Firearm booked as evidence,71
+91,0108,Infirm,64
+92,0329,Vandalized,58
+93,0601,Business,47
+94,3040,T/C - Resulting from Street Racing/Speed Exhibition,46
+95,1401,Blood Stains,42
+96,1310,Victim in vehicle,41
+97,1605,Lock slip/key/pick,40
+98,0602,Family,31
+99,0400,Force used,30
+100,3019,T/C - Train vs Veh,28
+101,0603,Landlord/Tenant/Neighbor,27
+102,3023,T/C - Train vs Fixed Object,27
+103,0913,Victim knew Suspect,24
+104,3062,T/C - Bicyclist in Bicycle Lane,24
+105,0334,Brandishes weapon,24
+106,3020,T/C - Train vs Train,24
+107,2000,Domestic violence,23
+108,0328,Used toilet,22
+109,0102,Blind,22
+110,0342,Multi-susps overwhelm,18
+111,0326,Used driver,18
+112,0914,Other Felony,18
+113,0604,Reproductive Health Services/Facilities,17
+114,1212,LA Police Officer,17
+115,1816,Suspect is/was known gang member,15
+116,0325,Took merchandise,14
+117,0337,Demands money,14
+118,9999,Indistinctive MO,13
+119,3021,T/C - Train vs Bike,12
+120,1259,Victim is 14 years old thru 17 years old,12
+121,0345,Riding bike,12
+122,0905,Terrorist Group,12
+123,2001,Suspect on drugs,12
+124,2101,Counter Surveillance efforts,11
+125,3301,T/C - Traffic Control Devices,11
+126,3201,T/C - Weather/Lighting/Roadway,11
+127,1609,Smashed,11
+128,1100,Shots Fired,11
+129,1251,Victim was a student,11
+130,0429,Vict knocked to ground,10
+131,0432,Intimidation,9
+132,1258,Victim is 6 years old thru 13 years old,9
+133,1307,Breaks window,9
+134,0305,Attacks from rear,9
+135,0306,Crime on upper floor,9
+136,1409,Clothes,9
+137,0377,Takes vict's identification/driver license,8
+138,1257,Victim is Newborn-5 years old,8
+139,0104,Customer,8
+140,0302,Aimed gun,8
+141,3017,T/C - Bike vs Train,8
+142,1206,Under influence drugs/liquor,8
+143,0919,Road Rage,8
+144,1814,Susp is/was current/former boyfriend/girlfriend,8
+145,0421,Threaten to kill,8
+146,0336,Chain snatch,7
+147,1601,Bodily Force,7
+148,1420,Video surveillance booked/available,7
+149,1606,Open/unlocked,6
+150,0504,Forced to disrobe,6
+151,2028,Suspect was Repeat/known shoplifter,6
+152,0443,Threaten to harm victim (other than kill),6
+153,0330,Victims vehicle taken,6
+154,0410,Covered victim's face,6
+155,0304,Ate/drank on premises,6
+156,0216,Suspect wore hood/hoodie,6
+157,0103,Crippled,6
+158,2025,Suspect was Bisexual,5
+159,2029,Victim used profanity,5
+160,1304,"Stopped victim vehicle by flagging down, forcing T/A, etc.",5
+161,2026,Suspect was Deaf/hearing impaired,5
+162,2003,Suspect 5150/mentally challenged or disturbed,5
+163,0100,Suspect Impersonate,5
+164,1013,Food,5
+165,0448,Grabbed,5
+166,0303,Ambushed,5
+167,0354,Suspect takes car keys,5
+168,0321,Ransacked,5
+169,0445,Suspect swung weapon,5
+170,0319,Profanity Used,5
+171,1312,Suspect follows victim in vehicle,4
+172,0358,Forces Entry,4
+173,0355,Demanded property other than money,4
+174,0406,Brutal Assault,4
+175,1815,Susp was student,4
+176,2018,Cannabis related,4
+177,0426,Twisted arm,4
+178,0430,Vict shot,4
+179,1607,Pried,4
+180,1231,Taxi Driver,4
+181,2012,"Suspect was costumed character (e.g., Barney, Darth Vader, Spiderman, etc.)",4
+182,1301,Forced victim vehicle to curb,4
+183,0301,Escaped on (used) transit train,4
+184,2024,Suspect was Juvenile,4
+185,0427,Whipped,3
+186,0444,Pushed,3
+187,1253,Bus Driver,3
+188,0447,Suspect threw object at victim,3
+189,0503,Fondle victim,3
+190,1001,Aid for vehicle,3
+191,0552,Suspect is Victim's Father,3
+192,1240,Vehicle occupant/Passenger,3
+193,0522,Touched,3
+194,1602,Cutting Tool,3
+195,1025,Train,3
+196,0352,Took Victim's clothing or jewelry,3
+197,0202,Cap/hat,3
+198,1302,Suspect forced way into victim's vehicle,3
+199,1217,Teenager(Use if victim's age is unknown),3
+200,2021,Suspect was Aged (60+over),3
+201,0408,Choked/uses choke hold/Strangulation/Suffocation,3
+202,0401,Bit,2
+203,0537,Suspect removes victim's clothing,2
+204,0413,Drugged,2
+205,0412,Disfigured,2
+206,0916,Forced theft of vehicle (Car-Jacking),2
+207,2030,Victim used racial slurs,2
+208,2037,"Temporary/Vacation rental (AirBnB, etc)",2
+209,0307,Defecated/urinated,2
+210,0701,THEFT: Trick or Device,2
+211,0561,Suspect is Victim's Son,2
+212,0311,Graffiti,2
+213,0314,Hot Prowl,2
+214,0536,Suspect removes own clothing,2
+215,0373,Handicapped/in wheelchair,2
+216,0409,Cover mouth w/hands,2
+217,0527,Actual Intercourse,2
+218,0425,Tortured,2
+219,0507,Forced to orally copulate suspect,2
+220,0335,Cases location,2
+221,0500,Sex related acts,2
+222,0450,Suspect shot at victim (no hits),2
+223,3901,T/C - Safety Equipment,2
+224,0361,Suspect is neighbor,2
+225,0327,Used lookout,2
+226,1243,Co-habitants,2
+227,1101,Shots Fired (Animal) - Animal Services,2
+228,2008,In possession of a Ballistic vest,2
+229,1017,Information,2
+230,1403,Fingerprints,2
+231,1012,Find a job,2
+232,1213,LA Fireman,2
+233,1804,Susp is/was victim's employer,2
+234,0945,Estes Robbery,2
+235,0930,Unauthorized use of victim's credit/debit card or number,2
+236,1803,Susp is/was victim's employee,2
+237,2006,Suspect was transgender,2
+238,1313,Suspect exits vehicle and attacks pedestrian,2
+239,1236,Clerk/Employer/Owner,2
+240,1204,Moving,2
+241,1020,Narcotics,2
+242,1416,Saliva,2
+243,0397,"Cut lock (to bicycle, gate, etc.",1
+244,0366,Ordered vict to open safe,1
+245,0411,Cut/stabbed,1
+246,0369,Suspect speaks spanish,1
+247,1418,Skeleton/Bones,1
+248,0371,Gang affiliation questions asked/made gang statement,1
+249,0405,Bound,1
+250,0394,"Susp takes UPS, Fedex, USPS packages",1
+251,0404,"Bomb Threat, no bomb",1
+252,1415,Rape Kit,1
+253,1205,On Vacation/Tourist,1
+254,0378,Brings own bag,1
+255,1410,Gun Shot Residue,1
+256,0385,Suspect removed parts from vehicle,1
+257,1412,Jewelry,1
+258,2020,Mistreatment of animal,1
+259,0360,Suspect is Other Family Member,1
+260,0359,Made unusual statement,1
+261,0112,Police,1
+262,0118,Seeking someone,1
+263,1238,Handicapped,1
+264,1270,Victim was gang member,1
+265,1305,Victim forced into vehicle,1
+266,0309,Drive-by shooting,1
+267,0310,Got victim to withdraw savings,1
+268,1306,"Victim parking, garaging vehicle",1
+269,1221,Missing Clothing/Jewelry,1
+270,0316,Makes victim give money,1
+271,1216,Sales,1
+272,1315,Victim unloading vehicle,1
+273,1214,"Banking, ATM",1
+274,0340,Suspect follows victim/follows victim home,1
+275,0346,Snatch property and runs,1
+276,0353,Weapon Concealed,1
+277,1026,Use the phone or toilet,1
+278,0356,Suspect spits on victim,1
+279,1207,Hitchhiker,1
+280,1208,Illegal Alien,1
+281,0422,Threaten Victims family,1
+282,0414,Gagged,1
+283,0417,Kicked,1
+284,0541,Suspect puts object(s) in victim's rectum,1
+285,0946,Gang Feud,1
+286,0555,Suspect is Victim's Sister,1
+287,0903,Hatred/Prejudice,1
+288,2303,Theft/Loss/Diversion,1
+289,2150,Coded/ciphered literature/correspondence,1
+290,2145,Illicit radiological material (susp offer/solicts),1
+291,0908,Prostitution,1
+292,2100,Observation/Surveillance,1
+293,2036,Hate-related language,1
+294,2034,Victim was asleep/unconscious,1
+295,2032,Victim left property unattended,1
+296,2009,Suspect was Inmate/Incarcerated,1
+297,2011,Vendor (street or sidewalk),1
+298,0917,Victim's Employment,1
+299,2027,Suspect was Pregnant,1
+300,0923,Stolen/Forged Checks (Personal Checks),1
+301,0929,Unauthorized use of victim's bank account information,1
+302,2013,Tour Bus/Van Operator,1
+303,1913,Suspect meets victim on internet/chatroom,1
+304,1819,Common-law Spouse,1
+305,1817,Acquaintance,1
+306,1801,Susp is/was mother's boyfriend,1
+307,0418,Kidnapped,1
+308,0419,Pulled victims hair,1
+309,2014,Suspect was Uber/Lyft driver,1
+310,0424,Tore clothes off victim,1
+311,1024,Teach,1
+312,1022,Ride,1
+313,1701,Elder Abuse/Physical,1
+314,0431,Sprayed with chemical,1
+315,1802,Susp is/was victim's co-worker,1
+316,0521,Tongue or mouth to anus,1
+317,0446,Suspect swung fist,1
+318,1805,Susp is/was fellow gang member,1
+319,1808,Susp is/was other religious confidant,1
+320,0505,Forced to fondle suspect,1
+321,1014,Game,1
+322,0511,Masochism/bondage,1
+323,0515,"Put hand, finger or object into vagina",1
+324,0520,Solicited/offered immoral act,1
+325,2315,Sector-Specific Incident (SSI),1
