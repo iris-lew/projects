@@ -39,7 +39,7 @@
     .container .projects_grid{
         position: relative;
         display: inline-grid; /*inline-grid*/
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 150px auto 100px;
         width: 1100px;
         column-gap: 20px;
         row-gap: 20px;
