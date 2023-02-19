@@ -30,7 +30,7 @@
 
     .container .cv_describe {
         display: None; /*block*/
-        margin-top: 20px;
+        margin-top: 10px;
         position: relative;
         width: 1100px;
         text-align: left;
@@ -41,11 +41,14 @@
         display: inline-grid; /*inline-grid*/
         grid-template-columns: 150px auto 100px;
         width: 1100px;
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 10px;
+        row-gap: 10px;
         text-align: left;
     }
 
+    .grid-item{
+        border-bottom: 1px dotted black;
+    }
 
     .button {
         background-color: #9A9A9A;

@@ -7,6 +7,7 @@
 
 <body>
 	<center>
+		<!-- ABOUT ME DESCRIPTION -->
 	<h1>Iris Lew</h1>
 	<h2>An insightful data scientist who improves quality and decreases costs</h2>
 	<div>
@@ -19,8 +20,10 @@
 			<ul>
 				<li><b>a data scientist</b> with five years of social science survey research experience in education, healthcare, 
 					and consumer research/opinions.</li>
-				<li><b>a strong communicator</b> who works with clients, oversight teams, and subcontractors from design through delivery.</li>
-				<li><b>an independent, innovative project leader</b> who consistently delivers high-quality results ahead of deadlines.</li>
+				<li><b>a strong communicator</b> who works with clients, oversight teams, and subcontractors 
+					from design through delivery.</li>
+				<li><b>an independent, innovative project leader</b> who consistently delivers high-quality results ahead 
+					of deadlines.</li>
 				<li><b>a talented researcher</b> who is adept with data: drawing samples, performing QA on collected data, 
 					and implementing inferential statistics.</li>
 				<li><b>a skilled writer</b> who can translate complex technical information into best practices and documentation.</li>
@@ -28,91 +31,141 @@
 			</p>
 		</div>
 	</div>
-
+	<!-- THE SLIDER/TOGGLE -->
 	<div class="container">
 		<label class="toggle">
 			<input type="checkbox">
 			<span class="slider"></span>
 			<span class="labels" data-on="CV" data-off="Projects" onclick="toggle_func()"></span>
 		</label>
-
+	<!-- MY PROJECTS -->
 		<br>
 		<div class="projects_grid" id="projects_grid_id">
 			<div class="grid-item"><b>Title</b></div>
 			<div class="grid-item"><b>Description</b></div>
 			<div class="grid-item"><b>Github Link</b></div>
 			<div class="grid-item">LA Traffic Collisions</div>
-			<div class="grid-item">Using LA City's Traffic Collision data, I did some exploratory data analysis on the success
-				of Vision Zero.<br><br>
+			<div class="grid-item">
+				Vision Zero's goal is to eliminate traffic fatalities and severe injuries.
+				Los Angeles is infamous for its traffic and high speed highway chases, and it adopted Vision Zero in 2015.
+				Using LA City's Traffic Collision data, I did some exploratory data analysis on the success
+				of Vision Zero.
+				<br><br>
+				While this was originally a group project by Ben Meier, Rebecca Sun, and I for our
+				DATASCI W200 class together, I redid the writing and the code to be mine.
+				<br><br>
 				<i>Language: Python<br>
-				Libraries: MatPlotLib, Seaborn, pandas<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium<br>
 				Statistics: Summary statistics</i>
+				<br>
 			</div>
 			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_001_LATrafficCollisions">
 				Link</a></div>
 			<div class="grid-item">Phishing for Significance</div>
-			<div class="grid-item">This was originally a group project done in conjunction with Angelique Agho and Srila Maiti.
-				We created a survey where we tested whether having interactive cybersecurity training, as compared to training 
-				where which only requires reading, would increase the accuracy rate of identification rate of phishing emails 
-				that are targeted to students. <br>
-				<br>
+			<div class="grid-item">
+				For our DATASCI W241 class, 
+				my group and I were concerned about whether cybersecurity training could be improved so that less students would 
+				be victims of online recruitment fraud. 
+				At the time this project occurred, there was no cybersecurity training that was provided to the students,
+				and the university only offered "Fight the Phish" posters which we had to search for ourselves.
+				We created a survey where we tested whether having interactive cybersecurity training, 
+				as compared to training where which only requires reading, 
+				would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
+				<br><br>
+				While this was originally done in conjunction with Angelique Agho and Srila Maiti,
+				most of the Qualtrics programming, R code, and writing is mine.
+				<br><br>
 				<i>Qualtrics link: <a href="https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg">
 					https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
 				Language: R<br>
-				Libraries: data.table, ggplot<br>
+				R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
 				Statistics: Summary statistics, linear regression, A/B testing
-				</i></div>
+				</i>
+				<br>
+			</div>
 			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_002_PhishingForSignificance">
 				Link</a></div>
 			<div class="grid-item">LinkedIn Recommendations in a Word Cloud</div>
-			<div class="grid-item">Discovering myself (or what others think of me on LinkedIn) 
-				while exploring a common capability of R and Tableau: word clouds.<br>
+			<div class="grid-item">
+				I've previously used Word Clouds through my work, so I was interested in exploring 
+				how they functioned for myself through R and Tableau. 
+				Additionally, I wanted to see if there were any common words that 
+				people used to describe in their recommendations on LinkedIn so I combined these two desires.
+				<br><br>
+				The coding and write up was done by me.
+				<br>
 			<br>
-			<i>Language: R<br>
-			Software: Tableau<br>
-			Statistics: Bag of Words</i></div>
+			<i>
+				Language: R<br>
+				R Libraries: readxl, writexl, tm, tau, tidyr, RColorBrewer, wordcloud, wordcloud2,
+				tidyverse, reshape2<br>
+				Software: Tableau<br>
+				Statistics: Bag of Words
+			</i>
+			<br>
+			</div>
 			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_003_RecommendationsWordcloud">
 				Link</a></div>
 			
 		</div>
-
+		<br>
+		<br>
+	
+		<!-- CV -->
 		<div class="cv_describe" id="cv_describe_id">
 			<h2>Experience</h2>
-				<p2>University of California, Berkeley | Teaching Assistant | Jan 2023 - Present
-				</p>
+				<p2><b>University of California, Berkeley</b></br>
+					<i>Reader (Teaching Assistant) | Jan 2023 - Present</i></p>
 				<ul>
-					<li>Organized presentations to showcase past research experiments to inspire current students to develop their experiments</li>
-					<li>Hold weekly office hours to guide students on their projects and answer questions about the class</li>
-					<li>Provide feedback on where to improve course structure</li>
+					<li>Organized presentations to showcase five past research experiments to inspire current students to 
+						develop their own experiments</li>
+					<li>Holds weekly office hours to guide students on their term projects and answer questions about the class 
+						(topics include blocking and clustering, the sharp null hypothesis, reading coefficient tables, etc.)</li>
+					<li>Provides feedback on how to improve course structure and student assignments</li>
+					<li>Grade homework assignments for 68 students (assignments contains R code and statistics)</li>
 				</ul>
 				<br>
-				<p2>Morning Consult | Data Scientist | Jun 2021 - Jan 2022
-				</p>
+				<p2><b>Morning Consult</b></br>
+					<i>Data Scientist | Jun 2021 - Jan 2022</i></p>
 				<ul>
-					<li>Wrote a function to systematically upload translations to web surveys</li>
-					<li>Developed a training guide that was later used to update new hire trainings</li>
-					<li>Created and managed bids on surveys</li>
+					<li>Wrote a function to accelerate and systematically upload translations to web surveys via an API, 
+						while accounting for updates to the original text to prevent inaccurate translations</li>
+					<li>Developed a training guide for programming, fielding, and analyzing surveys 
+						that was later used to update new hire trainings</li>
+					<li>Programmed and analyzed surveys that were used for client decisions as well as for news reports</li>
+					<li>Worked with self-service and managed panels to collect sample for multiple surveys at a time</li>
 				</ul>
 				<br>
-				<p2>Center for the Study of Services | Research Associate | Feb 2019 - May 2021</p>
+				<p2><b>Center for the Study of Services</b></br>
+					<i>Research Associate | Feb 2019 - May 2021</i></p>
 				<ul>
-					<li>Created and maintained data pipelines</li>
-					<li>Demonstrates client communication skills on large projects</li>
-					<li>Participates in various roles as the web manager, lettershop manager, and CATI manager</li>
-					<li>Creates and manages SQL, VBA, Stata, and R programs, and their documentation</li>
+					<li>Served as a project lead and secondary project lead for two provider surveys</li>
+					<li>Created and maintained two data pipelines</li>
+					<li>Demonstrated client communication skills on two large annual projects</li>
+					<li>Created two client-facing Tableau reports</li>
+					<li>Received daily data from three CATI firms and provided feedback to improve data quality for six weeks</li>
+					<li>Produced 28 reports using in-house automation software</li>
+					<li>Write two technical documents for internal enterprise programs and two guides detailing project workflow</li>
+					<li>Created and manages SQL, VBA, Stata, and R programs, and their documentation</li>
+					<li>Supported company diversity initiatives through working groups</li>
 				</ul>
 				<br>
-				<p2>Hanover Research | Senior Research Associate | Oct 2017 - Feb 2019</p>
+				<p2><b>Hanover Research</b></br>
+					<i>Senior Research Associate | Oct 2017 - Feb 2019</i></p>
 				<ul>
-					<li>Received a promotion in less than a year</li>
+					<li>Received a promotion in less than a year (Research Associate to Senior Research Associate)</li>
 					<li>Received the Above and Beyond Award on three separate occasions within one year</li>
 					<li>"Ensuring Access to Programming for All Students: An Evaluation of Equity in a District’s International 
 						Baccalaureate Programming." AERA 2019. Leila Richey Nuland, Hanover Research; Michael Greenfield, 
 						Harrison Central School District; Cate Keller, Hanover Research; Nadya Abramava, Hanover Research; Joy Gitter; 
 						Iris Lew</li>
+					<li>Showcased a Tableau dashboard and report at a company All-Stars firm-wide meeting</li>
+					<li>Voluntarily designed and led an R tutorial training as well as hosting R Learning Lunches for fellow
+						teammates with positive feedback from the entire team</li>
 				</ul>
 				<br>
-				<p2>Student Researcher at UC Berkeley | May 2017 - Sept 2017</p>
+				<p2><b>Student Researcher at UC Berkeley</b></br>
+					<i>May 2017 - Sept 2017</i></p>
 				<ul>
 					<li>Bangladesh Project: Performed secondary research to analyze how aid-driven industries can lead to health 
 						and environmental crises in Bangladesh</li>
