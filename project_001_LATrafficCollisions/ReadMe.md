@@ -1,5 +1,11 @@
 # LA Traffic Collisions
-I analyzed the possible impact of Vision Zero in Los Angeles using the LA City's traffic collision dataset. The dataset's description and link to download can be found within the writeup.
+Vision Zero's goal is to eliminate traffic fatalities and severe injuries. Los Angeles is infamous for its traffic and high speed highway chases, and it adopted Vision Zero in 2015. Using LA City's Traffic Collision data, I did some exploratory data analysis on the success of Vision Zero.
+
+While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together, I redid the writing and the code to be mine.
+
+Language: Python<br>
+Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium<br>
+Statistics: Summary statistics
 
 ## Files
 * LA_Traffic_Collisions_Writeup.ipynb: contains the writeup, analysis, code, and graphs for the project
