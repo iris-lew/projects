@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Iris Lew - About Me</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+Last Updated: April 1, 2024
+
+<Style type='text/css' >
+    body{background-color:rgb(0,0,0);
+        background-image:url(http://www.zingerbugimages.com/backgrounds/purple_stars.gif);
+        background-position:top left;background-repeat:repeat;background-attachment:fixed;}</Style>
+
+<body>
+	<center>
+		<!-- ABOUT ME DESCRIPTION -->
+	<h1>
+		<span style="color:#ff0000;">I</span>
+		<span style="color:#ff3c00;">r</span>
+		<span style="color:#ff7300;">i</span>
+		<span style="color:#ffaa00;">s&nbsp;</span>
+		<span style="color:#ffe500;">L</span>
+		<span style="color:#e1ff00;">e</span>
+		<span style="color:#aaff00;">w</span>
+	</h1>
+	<h2>
+		<span style="color:#ff0000;">I</span>
+		<span style="color:#ff1e00;">n</span>
+		<span style="color:#ff3c00;">s</span>
+		<span style="color:#ff5500;">i</span>
+		<span style="color:#ff7300;">g</span>
+		<span style="color:#ff9100;">h</span>
+		<span style="color:#ffaa00;">t</span>
+		<span style="color:#ffc800;">f</span>
+		<span style="color:#ffe500;">u</span>
+		<span style="color:#ffff00;">l&nbsp;</span>
+		<span style="color:#e1ff00;">d</span>
+		<span style="color:#c3ff00;">a</span>
+		<span style="color:#aaff00;">t</span>
+		<span style="color:#8cff00;">a&nbsp;</span>
+		<span style="color:#6eff00;">s</span>
+		<span style="color:#51ff00;">c</span>
+		<span style="color:#37ff00;">i</span>
+		<span style="color:#1aff00;">e</span>
+		<span style="color:#00ff04;">n</span>
+		<span style="color:#00ff1e;">t</span>
+		<span style="color:#00ff3c;">i</span>
+		<span style="color:#00ff59;">s</span>
+		<span style="color:#00ff73;">t&nbsp;</span>
+		<span style="color:#00ff91;">w</span>
+		<span style="color:#00ffaa;">h</span>
+		<span style="color:#00ffc8;">o&nbsp;</span>
+		<span style="color:#00ffe6;">d</span>
+		<span style="color:#00ffff;">e</span>
+		<span style="color:#00e1ff;">l</span>
+		<span style="color:#00c3ff;">i</span>
+		<span style="color:#00aaff;">v</span>
+		<span style="color:#008cff;">e</span>
+		<span style="color:#006eff;">r</span>
+		<span style="color:#0055ff;">s&nbsp;</span>
+		<span style="color:#0037ff;">d</span>
+		<span style="color:#0019ff;">a</span>
+		<span style="color:#0000ff;">t</span>
+		<span style="color:#1e00ff;">a</span>
+		<span style="color:#3c00ff;">-</span>
+		<span style="color:#5500ff;">d</span>
+		<span style="color:#7300ff;">r</span>
+		<span style="color:#9000ff;">i</span>
+		<span style="color:#aa00ff;">v</span>
+		<span style="color:#c800ff;">e</span>
+		<span style="color:#e500ff;">n&nbsp;</span>
+		<span style="color:#ff00ff;">s</span>
+		<span style="color:#ff00e1;">o</span>
+		<span style="color:#ff00c3;">l</span>
+		<span style="color:#ff00a6;">u</span>
+		<span style="color:#ff008c;">t</span>
+		<span style="color:#ff006e;">i</span>
+		<span style="color:#ff0051;">o</span>
+		<span style="color:#ff0037;">n</span>
+		<span style="color:#ff001a;">s</span>
+	</h2>
+	<div>
+		<div style="display:inline-block; vertical-align:top;">
+			<img class="my-picture" src="images/il.jpg">
+		</div>
+		<div style="display:inline-block;text-align: left;">
+			<br>
+			<p>I am
+			<ul>
+				<li>a <b>critical thinker</b> who uses a data-driven approach to guide decision making</li>
+				<li>a <b>translator</b> of complex technical information into best practices and documentation</li>
+				<li>a <b>flexible and creative innovator</b> who can design and deploy production-ready advanced models</li>
+				<li>adept at <b>identifying a high-quality solution</b> that stays within the budget and meets client needs</li>
+				<li>an <b>independent, innovative project manager</b> who consistently leads the team to deliver actionable insights before deadlines</li>
+			</ul>
+			</p>
+		</div>
+	</div>
+	<!-- THE SLIDER/TOGGLE -->
+	<div class="container">
+		<label class="toggle">
+			<input type="checkbox">
+			<span class="slider"></span>
+			<span class="labels" data-on="CV" data-off="Projects" onclick="toggle_func()"></span>
+		</label>
+	<!-- MY PROJECTS -->
+		<br>
+		<div class="projects_grid" id="projects_grid_id">
+			<div class="grid-item"><b>Title</b></div>
+			<div class="grid-item"><b>Description</b></div>
+			<div class="grid-item"><b>Github Link</b></div>
+			<div class="grid-item">Do English Language Learners Write Like Published Authors?</div>
+			<div class="grid-item">
+				For our DATASCI W266 (Natural Language Processing with Deep Learning) class,
+				Srila and I examined whether the performance of BERT models could be improved in scoring 
+				essays written by English Language Learners (ELLs).
+				Prior studies suggest that the pre-trained data (Google BooksCorpus and Wikipedia) 
+				of BERT was unsuited for automatic essay scoring,
+				thus we decided to experiment with unfreezing the pretrained layers of BERT-base-cased and BERTweet-base.
+				We decided to also experiment with BERTweet because it is pretrained on Tweets,
+				and we are hoping that its informal nature will be more reminiscent of student writing.
+				We find that depending less on the pretraining weights (with more layers unfrozen) 
+				provided more accurate predictions but BERT-base-cased outperformed BERTweet-base suggesting that
+				student essays belonged to a different population than Tweets.
+				<br><br>
+				Srila wrote the majority of the code while I did the background research, piecing the code together,
+				and the writing.
+				<br><br>
+				<i>Language: Python<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, 
+				transformers, sklearn, nltk, wordcloud, scipy, yellowbrick, torch<br>
+				Architecture: Tensorflow and Keras<br>
+				Statistics: Summary statistics</i>
+				<br>
+			</div>
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_004_DoELLStudentsWriteLikePublishedAuthors">
+				Link</a></div>
+
+				<div class="grid-item">Phishing for Significance</div>
+				<div class="grid-item">
+					For our DATASCI W241 (Experiments and Causal Inference) class, 
+					my group and I were concerned about whether cybersecurity training could be improved so that less students would 
+					be victims of online recruitment fraud. 
+					At the time this project occurred, there was no cybersecurity training that was provided to the students,
+					and the university only offered "Fight the Phish" posters which we had to search for ourselves.
+					We created a survey where we tested whether having interactive cybersecurity training, 
+					as compared to training where which only requires reading, 
+					would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
+					<br><br>
+					While this was originally done in conjunction with Angelique Agho and Srila Maiti,
+					most of the Qualtrics programming, R code, and writing is mine.
+					<br><br>
+					<i>Qualtrics link: <a href="https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg">
+						https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
+					Language: R<br>
+					R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
+					Statistics: Summary statistics, linear regression, A/B testing
+					</i>
+					<br>
+				</div>
+				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_002_PhishingForSignificance">
+					Link</a></div>
+
+			<div class="grid-item">LA Traffic Collisions</div>
+			<div class="grid-item">
+				Vision Zero's goal is to eliminate traffic fatalities and severe injuries.
+				Los Angeles is infamous for its traffic and high speed highway chases, and it adopted Vision Zero in 2015.
+				Using LA City's Traffic Collision data, I did some exploratory data analysis on the success
+				of Vision Zero.
+				<br><br>
+				While this was originally a group project by Ben Meier, Rebecca Sun, and I for our
+				DATASCI W200 class together, I redid the writing and the code to be mine.
+				<br><br>
+				<i>Language: Python<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium<br>
+				Statistics: Summary statistics</i>
+				<br>
+			</div>
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_001_LATrafficCollisions">
+				Link</a></div>
+			
+			<div class="grid-item">LinkedIn Recommendations in a Word Cloud</div>
+			<div class="grid-item">
+				I've previously used Word Clouds through my work, so I was interested in exploring 
+				how they functioned for myself through R and Tableau. 
+				Additionally, I wanted to see if there were any common words that 
+				people used to describe in their recommendations on LinkedIn so I combined these two desires.
+				<br><br>
+				The coding and write up was done by me.
+				<br>
+			<br>
+			<i>
+				Language: R<br>
+				R Libraries: readxl, writexl, tm, tau, tidyr, RColorBrewer, wordcloud, wordcloud2,
+				tidyverse, reshape2<br>
+				Software: Tableau<br>
+				Statistics: Bag of Words
+			</i>
+			<br>
+			</div>
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_003_RecommendationsWordcloud">
+				Link</a></div>		
+		</div>
+		<br>
+		<br>
+	
+		<!-- CV -->
+		<div class="cv_describe" id="cv_describe_id">
+			<h2>Experience</h2>
+				<p2><b>University of California, Berkeley</b></br>
+					<i>Reader (Teaching Assistant) | Jan 2023 - Dec 2023</i></p>
+				<ul>
+					<li>Created a standard operating process for students to conduct their survey research experiments</li>
+					<li>Organized presentations to showcase nine past research experiments to inspire current students to 
+						develop their own experiments</li>
+					<li>Held weekly office hours to guide students on their term projects and answer questions about the class 
+						(topics include blocking and clustering, the sharp null hypothesis, reading coefficient tables, etc.)</li>
+					<li>Advocated for students by providing feedback on how to improve course structure and student assignments</li>
+					<li>Graded homework assignments for up to 72 students (assignments contains R code and statistics)</li>
+				</ul>
+				<br>
+				<p2><b>Morning Consult</b></br>
+					<i>Data Scientist | Jun 2021 - Jan 2022</i></p>
+				<ul>
+					<li>Wrote a function to accelerate and systematically upload translations to web surveys via an API, 
+						while accounting for updates to the original text to prevent inaccurate translations</li>
+					<li>Routinely programmed and analyzed complex surveys involving stratisfied sampling and split message testing
+						(contained up to 27 splits); some surveys were for news reports</li>
+					<li>Developed a training guide for programming, fielding, and analyzing surveys that was later 
+						used as the basis for all subsequent new hire trainings</li>
+					<li>Worked with self-service and managed panels to collect sample for multiple surveys at a time while staying within budget</li>
+				</ul>
+				<br>
+				<p2><b>Center for the Study of Services</b></br>
+					<i>Research Associate | Feb 2019 - May 2021</i></p>
+				<ul>
+					<li>Served as a project lead and secondary project lead for two provider surveys</li>
+					<li>Received daily data from three subcontractors and provided feedback to improve data quality for six weeks</li>
+					<li>Created and maintained two data pipelines</li>
+					<li>Produced 28 reports using in-house automation software with quick turnaround time that garnered client praise</li>
+					<li>Wrote two technical documents for internal enterprise programs and two guides detailing project workflow 
+						that helped new users and freed up time for programmers to work on other projects</li>
+					<li>Created two client-facing Tableau reports</li>
+					<li>Demonstrated client communication skills on two large annual projects</li>
+					<li>Created and manages SQL, VBA, Stata, and R programs, and their documentation</li>
+					<li>Fielded multi-modal (web, mail, and phone) surveys under NCQA oversight</li>
+					<li>Supported company diversity initiatives through working groups</li>
+				</ul>
+				<br>
+				<p2><b>Hanover Research</b></br>
+					<i>Senior Research Associate | Oct 2017 - Feb 2019</i></p>
+				<ul>
+					<li>Received a promotion in less than a year (Research Associate to Senior Research Associate)</li>
+					<li>Received the Above and Beyond Award on three separate occasions within one year</li>
+					<li>"Ensuring Access to Programming for All Students: An Evaluation of Equity in a District's International 
+						Baccalaureate Programming." AERA 2019. Leila Richey Nuland, Hanover Research; Michael Greenfield, 
+						Harrison Central School District; Cate Keller, Hanover Research; Nadya Abramava, Hanover Research; Joy Gitter; 
+						Iris Lew</li>
+					<li>Showcased a Tableau dashboard and report at a company All-Stars firm-wide meeting</li>
+					<li>Voluntarily designed and led an R tutorial training as well as hosting R Learning Lunches for fellow
+						teammates with positive feedback from the entire team</li>
+				</ul>
+				<br>
+				<p2><b>Student Researcher at UC Berkeley</b></br>
+					<i>May 2017 - Sept 2017</i></p>
+				<ul>
+					<li>Bangladesh Project: Performed secondary research to analyze how aid-driven industries can lead to health 
+						and environmental crises in Bangladesh</li>
+					<li>Power Africa Project: Performed secondary research to analyze the construction of the Give III Dam 
+						and its relationship to Power Africa</li>
+				</ul>
+				<br>
+				<p2><b>Top Notch Energy</b></br>
+					<i>Secretary | May 2012 - Sept 2014</i></p>
+				<ul>
+					<li>Helped migrate the company from a pen and paper system to an electronic system</li>
+					<li>Was a friendly, amicable, and professional secretary who welcomed customers and answered phone calls</li>
+				</ul>
+			<h2>Coaching</h2>
+			<p2><b>Introduction to Tableau | Hanover Research</b><br>
+				I designed a Tableau training and piloted a demonstration of the training to both survey 
+				and secondary research staff members. 
+				This training focused on teaching staff members to create various different graphs (e.g., bar graphs, likert scales, 
+				NPS scales), 
+				to understand how Tableau reads the data, and how to manipulate data to get it in the desired format for Tableau.</p2>
+			<br>
+			<br>
+			<p2><b>Introduction to R | Hanover Research</b><br>
+				I designed and administered an R training that was targeted to survey researchers and I 
+				later adapted this to fit secondary researchers too. 
+				This training encompassed the topics of set up, vocabulary, if-statements, for loops, and while loops.
+			</p2>
+			<br>
+			<br>
+			<p2><b>Association of Psychology Undergraduates | UC Berkeley</b><br>
+				I served as a mentor for two years to one mentee. 
+				I recommended courses, provided textbooks, and answered any and all questions she may have 
+				had regardless of topic.<br>
+				<blockquote>
+				"If possible, I would give her 100000. 
+				Iris is an amazing mentor. 
+				She is so smart and successful yet she is so down to earth, funny, and just straight out friendly! 
+				She is very knowledgeable about everything that you need to know about psych major, 
+				research, study abroad, random classes, etc. She is just simply amazing." <br>
+				-Mentee
+				</blockquote>
+			</p2>
+			<br>
+
+			<h2>Education</h2>
+			<p2><b>University of California - Berkeley | School of Information</b><br>
+				<i>Master in Information and Data Science | Jan 2022 - Dec 2023</i></p>
+				<ul>
+					<li>Designed and presented projects using data science and machine learning</li>
+					<li>Co-hosted a Course Selection Office Hour as a Student Representative</li>
+					<li>Courses Completed</li>
+					<ul>
+						<li>DATASCI W200: Introduction to Data Science Programming</li>
+						<li>DATASCI W201: Research Design and Applications for Data and Analysis</li>
+						<li>DATASCI W203: Statistics for Data Science</li>
+						<li>DATASCI W205: Fundamentals of Data Engineering</li>
+						<li>DATASCI W207: Applied Machine Learning</li>
+						<li>DATASCI W241: Experiments and Causal Inference</li>
+						<li>DATASCI W266: Natural Language Processing with Deep Learning </li>
+						<li>DATASCI W255: Machine Learning Systems Engineering </li>
+						<li>DATASCI W210: Capstone </li>
+					</ul>
+				</ul> 
+				<br>
+			<p2><b>Northern Virginia Community College</b><br>
+			<i>Professional Development | Jun 2020 - Aug 2020</i></p>
+			<ul>
+				<li>Courses Completed</li>
+				<ul>
+					<li>MTH 266: Linear Algebra</li>
+				</ul>
+			</ul>
+			<br>
+			<p2><b>University of Cambridge | Pembroke College</b><br>
+				<i>Study Abroad, Psychology | Jun 2016 - Aug 2016</i></p>
+				<ul>
+					<li>Wrote 5 research papers on the following topics: 
+						heuristics, Prospect Theory, the Somatic Marker Hypothesis, 
+						clinical conditions affecting decision making, and reasoning</li>
+					<li>Courses Completed</li>
+					<ul>
+						<li>Supervision (Independent Research)</li>
+						<li>Psych of Language</li>
+						<li>Spooks and Spies</li>
+					</ul>
+				</ul>
+				<br>
+			<p2><b>University of California - Berkeley | College of Letters and Science</b><br>
+				<i>Bachelor of Arts in Psychology and Minor in Conservation and Resource Studies | Aug 2014 - May 2017</i></p>
+				<ul>
+					<li>Graduated with Distinction</li>
+					<li>Honors Societies: Psi Chi (Psychology) and Phi Beta Kappa</li>
+					<li>Honors Thesis: "Examining a Violation of Procedure Invariance Using Willingness to Pay and Choice" 
+						<ul>
+							<li>Conducted 4 online laboratory experiments using Qualtrics and Amazon mTurk</li>
+							<li>Did the literature review, implemented the experiments, analyzed and coded the results, wrote the manuscript</li>
+						</ul>
+					</li>
+					<li>Relationships and Social Cognition Lab - SES, Stress, and Emotion Regulation Project (2016-2017):
+						<ul>
+							<li>Used R to analyze results</li>
+							<li>Manually coded up results in Excel</li>
+							<li>Learned how to program experiments using Inquisit</li>
+						</ul>
+					</li>
+				</ul>
+		</div>
+	</div>
+	
+
+	</center>
+
+</body>
+<script src="main.js"></script>
+</html>
