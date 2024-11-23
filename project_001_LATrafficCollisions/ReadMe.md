@@ -8,7 +8,7 @@ Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium<br>
 Statistics: Summary statistics
 
 ## Files
-* LA_Traffic_Collisions_Writeup.ipynb: contains the writeup, analysis, code, and graphs for the project (will only display block outputs up to the Folium map)
+* LA_Traffic_Collisions_Writeup.ipynb: contains the writeup, analysis, code, and graphs for the project. To view all outputs (including Folium map), click "Open in Colab" button to be redirected to Google Colab.
 * LA_Traffic_Collisions_Writeup_nofoliummap.ipynb: contains the writeup, analysis, code, and graphs for the project (Folium map commented out to aid in GitHub pages display, all other block outputs displayed)
 * LAPD_Reporting_Districts.csv: a dataset that contains the reporting districts' information
 * MO_CODES_used_in_file.csv: the dataset I used after converting the MO Codes from the PDF (link to download can be found within the writeup) to csv
