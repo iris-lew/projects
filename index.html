@@ -4,7 +4,7 @@
 	<title>Iris Lew - About Me</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-Last Updated: December 31, 2024
+Last Updated: January 21, 2025
 <body>
 	<center>
 		<!-- ABOUT ME DESCRIPTION -->
@@ -74,7 +74,14 @@ Last Updated: December 31, 2024
 				particular question where the training data isn't the best, but is publicly available. It is also a lesson 
 				in critical thinking with data, and why we can't take promises at their face value.
 				<br><br>
-				I use two wildfire datasets taken from Kaggle in this write up. I originally used these datasets in my graduate program 
+				I use two wildfire datasets taken from Kaggle in this write up. I find that using the first dataset 
+				to create a neural net model isn't truly predicting wildfires despite its ~90% accuracy and 
+				instead likely predicting urbanism. The second dataset is a wildfire dataset that contains a lot information 
+				on the fires, where they occurred, how large they were, how long it burned for, and more. I recognized 
+				that it was likely more useful than the first in predicting wildfires, but there was no specific "outline" for 
+				how to use the information. 
+				<br><br>
+				I originally used these datasets in my graduate program 
 				as part of a group project, and am reusing some of the code from that project in the write up. The chunks
 				that are not from my code are denoted.
 				<br>
@@ -99,16 +106,18 @@ Last Updated: December 31, 2024
 				thus we decided to experiment with unfreezing the pretrained layers of BERT-base-cased and BERTweet-base.
 				We decided to also experiment with BERTweet because it is pretrained on Tweets,
 				and we are hoping that its informal nature will be more reminiscent of student writing.
-				We find that depending less on the pretraining weights (with more layers unfrozen) 
-				provided more accurate predictions but BERT-base-cased outperformed BERTweet-base suggesting that
-				student essays belonged to a different population than Tweets.
+				<br><br>
+				We find that depending less on the pretraining weights (with more layers unfrozen) provided more accurate predictions 
+				but BERT-base-cased outperformed BERTweet-base suggesting that student essays belonged to a different population than Tweets.
+				Together, the results indicate that ELL student essays don't contain writing similar to published authors (Google BooksCorpus), 
+				Wikipedia editors, or Tweets; therefore, models that don't contain training specific to student essays 
+				are unlikely to produce scores that reflect their actual grade.
 				<br><br>
 				Srila wrote the majority of the code while I did the background research, piecing the code together,
 				and the writing.
 				<br><br>
 				<i>Language: Python<br>
-				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, 
-				transformers, sklearn, nltk, wordcloud, scipy, yellowbrick, torch<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, transformers, sklearn, nltk, wordcloud, scipy, yellowbrick, torch<br>
 				Architecture: Tensorflow and Keras<br>
 				Statistics: Summary statistics</i>
 				<br>
@@ -120,12 +129,21 @@ Last Updated: December 31, 2024
 				<div class="grid-item">
 					For our DATASCI W241 (Experiments and Causal Inference) class, 
 					my group and I were concerned about whether cybersecurity training could be improved so that less students would 
-					be victims of online recruitment fraud. 
-					At the time this project occurred, there was no cybersecurity training that was provided to the students,
-					and the university only offered "Fight the Phish" posters which we had to search for ourselves.
-					We created a survey where we tested whether having interactive cybersecurity training, 
-					as compared to training where which only requires reading, 
-					would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
+					be victims of online recruitment fraud.
+					<br><br>
+					At the time this project occurred, there was no cybersecurity training that was provided to the students, 
+					and the university only offered "Fight the Phish" posters which we had to search for ourselves. 
+					We created a multi-factorial experiment where we used a survey to test whether having interactive cybersecurity training, as compared to training where 
+					which only requires reading, would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
+					In order to ensure that the respondents weren't just clicking through the training, we also included a timer so that the respondents 
+					had to stop and read through the training. For the measurement of the results, there were 10 emails, 
+					5 of which are real recruitment emails sent to the three of us but with the names changed and 5 of which are fake emails I wrote.
+					<br><br>
+					We find that there is no statistically significant difference in the identification rates between the students who 
+					received the interactive training vs. the passive training. The responses indicated that the emails looked "phishy"
+					in the first place, but a chi-square test revealed that there's no statistically significant difference between identifying
+					emails as phishing and whether they were actual phishing emails in the first place. The timer did not improve the respondent's 
+					accuracy rates of identifying phishing emails either.
 					<br><br>
 					While this was originally done in conjunction with Angelique Agho and Srila Maiti,
 					most of the Qualtrics programming, R code, and writing is mine.
@@ -143,18 +161,30 @@ Last Updated: December 31, 2024
 
 			<div class="grid-item">LA Traffic Collisions</div>
 			<div class="grid-item">
-				Vision Zero's goal is to eliminate traffic fatalities and severe injuries.
-				Los Angeles is infamous for its traffic and high speed highway chases, and it adopted Vision Zero in 2015.
-				Using LA City's Traffic Collision data, I did some exploratory data analysis on the success
-				of Vision Zero.
+				Vision Zero's goal is to eliminate traffic fatalities and severe injuries. Los Angeles (LA) is infamous for its traffic and high speed highway chases, 
+				and it adopted Vision Zero in 2015 in an attempt to reduce the
+				traffic deaths to 0. There is inconsistent messaging on whether it is aimed at LA as a whole or only on unincorporated county roadways.
+				The analysis is based on Vision Zero's impact on LA as a whole. 
 				<br><br>
-				While this was originally a group project by Ben Meier, Rebecca Sun, and I for our
-				DATASCI W200 class together, I redid the writing and the code to be mine.
+				Using LA City's Traffic Collision data, I did some exploratory data analysis and regression discontinuity analysis on the number of traffic collisions, the number of victims, and the number of victims
+				with severe or fatal injuries. For the most part, the collisions increased from 2015 onwards until COVID-19 was declared a pandemic.
+				Most of the collisions were in streets (95.4%) and parking lots (3.2%). There are certain intersections 
+				(e.g., the intersection of Sepulveda Blvd and Sherman Way) where there are more collisions. 
+				Most collisions were vehicle vs. vehicle collisions, but not all them resulted in a severe or fatal injury.
+				Out of 370,447 collisions which has a code associated with injury, only 13,794 (~3.7%) had a report of a severe or fatal injury.
+				The regression discontinuity analysis determined that there was a staistically significant reduction in the number of traffic collisions, 
+				likely due to the  COVID-19 pandemic, but not due to Vision Zero. In fact, after Vision Zero was signed, 
+				there was an increase in the number of collisions. However, there seemed to be little to no difference in the number of 
+				collisions with severe or fatal injuries regardless of whether Vision Zero was signed or Covid-19 declared as a pandemic. 
 				<br><br>
-				<i>Update (Nov 10, 2024):</i>I updated this analysis to include a regression discontinuity design.
+				While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together where we only did data exploration, I redid the writing and the code to be mine.
+				<br><br>
+				<i>Update (Nov 10, 2024):</i> I updated this analysis to include a regression discontinuity design.
 				The regression discontinuity design evaluates the effect of Vision Zero as well as the Covid-19 pandemic
 				on the number of collisions, the number of victims, and the number of collisions where there were severe or fatal injuries
 				recorded.
+				<br><br>
+				<b><i>Next steps:</i></b> If it supposed to focus on the unincorporated county roadways, then I should analyze only the traffic collisions on unincorporated county roadways.
 				<br><br>
 				<i>Language: Python<br>
 				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium, rdrobust<br>
