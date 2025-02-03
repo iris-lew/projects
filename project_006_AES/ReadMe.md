@@ -43,6 +43,10 @@ threshold, or whether the model will need to be even more similar to a human-gra
 
 While building this, I followed a guide and adapted most of the code from the guide for use in AES_2_model_no_custom.ipynb and AES_3_model_set_order.ipynb.
 
+Update (Feb 3, 2025): I tried to create a custom loss function: a smooth quadratic weighted kappa. Unfortunately, it only resulted in the model 
+overfitting and only memorizing the predictions. This means my next steps are to implement the quadratic weighted kappa as a metric rather than
+accuracy, and that I should debug the loss function.
+
 Language: Python<br>
 Python Libraries: Numpy, Pandas, PyTorch, PIL, wordcloud, transformers, MatPlotLib, Seaborn, scikit-learn, transformers, time, datetime,
 SciPy<br>
@@ -56,3 +60,5 @@ Model trained on ASAP-AES essays and domain1_score.
 Models trained on ASAP-AES essay sets. Includes 7 models where each set is added into the 
 training with the previous set(s) (i.e., Model 1 is trained on Set 1, predicting on Sets 2-8; 
 Model 2 is trained on Sets 1-2, predicting on Sets 3-8; and so on so forth.).
+* AES_4_custom_loss_function.ipynb: Developing the custom loss function
+* AES_5_model_custom_loss.ipynb: Using the custom loss function in the model. The model is trained on AES-AES essays and domain1_score.
