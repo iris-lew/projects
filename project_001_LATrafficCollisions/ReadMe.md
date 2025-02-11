@@ -32,7 +32,9 @@ Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium, copy, datetime, rd
 Statistics: Summary statistics, Regression Discontinuity
 
 ## Files
-* LA_Traffic_Collisions_Writeup.ipynb: contains the writeup, analysis, code, and graphs for the project. To view all outputs (including Folium map), click "Open in Colab" button to be redirected to Google Colab.
+* LA_Traffic_Collisions_1_EDA.ipynb: contains the writeup of the exploratory data analysis (validating columns) and assumptions.
+* LA_Traffic_Collisions_2_Analysis_FullDataset.ipynb: contains the analysis of the full dataset, after the exploratory data analysis. Recommended to view file in Colab to view and interact with Folium map.
+* LA_Traffic_Collisions_3_Analysis_Unincorporated.ipynb: contains the analysis of the unincorporated areas only, after the exploratory data analysis. Recommended to view file in Colab to view and interact with Folium map.
 * LAPD_Reporting_Districts.csv: a dataset that contains the reporting districts' information
 * MO_CODES_used_in_file.csv: the dataset I used after converting the MO Codes from the PDF (link to download can be found within the writeup) to csv
 * MO_CODES_utf8.csv: the MO codes in utf-8 format
