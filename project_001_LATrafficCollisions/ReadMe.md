@@ -14,10 +14,18 @@ likely due to the  COVID-19 pandemic, but not due to Vision Zero. In fact, after
 there was an increase in the number of collisions. However, there seemed to be little to no difference in the number of 
 collisions with severe or fatal injuries regardless of whether Vision Zero was signed or Covid-19 declared as a pandemic. 
 
-While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together where we only did data exploration, I redid the writing and the code to be mine.
-On November 10, 2024, I updated it to add the regression discontinuity analysis.
+Looking in to the language, it may just be that Vision Zero is supposed to focus on the unincorporated county roadways. I filtered out the data
+so that it is only the collisions that occur in the unincorporated areas of LA and re-ran the analysis. There isn't 
+much difference in the summary statistics, and there is no statistical significant difference on the number of collisions 
+before and after the signing of Vision Zero. There is a difference due to Covid-19, but there is no practical significance because 
+an average of about 1.3 collisions a day vs. 1 collision a day (and the number of collisions is a discrete number). There is no difference 
+between the number of collisions with a severe or fatal injuries before or after the signing of Vision Zero and the declaration of Covid-19 
+as a pandemic.
 
-Next steps: If it supposed to focus on the unincorporated county roadways, then I should analyze only the traffic collisions on unincorporated county roadways.
+While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together where we only did data exploration, I redid the writing and the code to be mine.
+On November 10, 2024, I updated it to add the regression discontinuity analysis. On February 10, 2025, I updated it to re-run the analysis on unincorporated areas of LA.
+
+Next steps: Figure out what those graphs from the rdrobust package are supposed to do.
 
 Language: Python<br>
 Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium, copy, datetime, rdrobust<br>
@@ -25,7 +33,6 @@ Statistics: Summary statistics, Regression Discontinuity
 
 ## Files
 * LA_Traffic_Collisions_Writeup.ipynb: contains the writeup, analysis, code, and graphs for the project. To view all outputs (including Folium map), click "Open in Colab" button to be redirected to Google Colab.
-* LA_Traffic_Collisions_Writeup_nofoliummap.ipynb: contains the writeup, analysis, code, and graphs for the project (Folium map commented out to aid in GitHub pages display, all other block outputs displayed)
 * LAPD_Reporting_Districts.csv: a dataset that contains the reporting districts' information
 * MO_CODES_used_in_file.csv: the dataset I used after converting the MO Codes from the PDF (link to download can be found within the writeup) to csv
 * MO_CODES_utf8.csv: the MO codes in utf-8 format
