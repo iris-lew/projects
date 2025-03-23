@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-Last Updated: March 21, 2025
 <html lang="en">
+Last Updated: March 22, 2025
 <div style="text-align:center">
-	<head>
-		<title>Iris Lew - About Me</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
+<head>
+	<title>Iris Lew - About Me</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
 <body>
 		<!-- ABOUT ME DESCRIPTION -->
 	<h1>Iris Lew</h1>
 	<h2>Insightful data scientist who delivers data-driven solutions</h2>
-	
 		<div style="display:inline-block; vertical-align:top;">
 			<img class="my-picture" src="images/il.jpg">
-		</div>
-		
+		</div> <!-- end of picture alignment -->
 		<div style="display:inline-block;text-align: left;">
 			<br>
 			<p>I am
@@ -26,260 +25,269 @@ Last Updated: March 21, 2025
 				<li>an <b>independent, innovative project manager</b> who consistently leads the team to deliver actionable insights before deadlines</li>
 			</ul>
 			</p>
-		</div>
-	</div>
-	<br>
-
+		</div> <!-- end of self-description -->
+	
 	<!-- THE SLIDER/TOGGLE -->
-	 <!--
 	<div class="container">
-		
 		<label class="toggle">
 			<input type="checkbox">
 			<span class="slider"></span>
 			<span class="labels" data-on="CV" data-off="Projects" onclick="toggle_func()"></span>
 		</label>
-		-->
-
-	<!-- Tab Links -->
-	<div class="tab">
-		<button class="tablinks" onclick="openContent(event, 'dashboard')" id="defaultOpen">Dashboard</button>
-		<button class="tablinks" onclick="openContent(event, 'projects')" id="projects2">Projects</button>
-		<button class="tablinks" onclick="openContent(event, 'CV')">CV</button>
-	</div>
-		
 	<!-- MY PROJECTS -->
 		<br>
-		
-		<div id="projects" class="tabcontent">
-			<div id="grid-row">
-				<div class="grid-item"><b>Title</b></div> 
-				<div class="grid-item"><b>Description</b></div>
-				<div class="grid-item"><b>Github Link</b></div>
+		<div class="projects_grid" id="projects_grid_id">
+			<div class="grid-item"><b>Title</b></div>
+			<div class="grid-item"><b>Description</b></div>
+			<div class="grid-item"><b>External Links</b></div>
 
-				<div class="grid-item">Automatic Essay Scoring</div>
+			<div class="grid-item">Taskmaster Dashboard</div>
+			<div class="grid-item">
+				Taskmaster is a British panel show I started watching in 2020. Throughout each series of the show, five contestants will complete tasks
+				and judged based by the Taskmaster, Greg Davies. Fans of the show have diligently compiled the number of the points awarded to each contestant, 
+				the type of tasks completed, any mistakes made, and more. This gives me all sorts of numbers and statistics I could then visualize in a dashboard.
+				<br><br>
+				I sourced the <a href="https://taskmaster.info" target="_blank">Taskmaster wiki</a> for the points each contestant earned for which tasks and 
+				created my own spreadsheets. I wanted the spreadsheets to be "raw data" and most of the data cleaning and calculations to be done with Tableau. Other people have 
+				created their own spreadsheets, but I found that most of the spreadsheets don't include the calculations done for other series of the Taskmaster 
+				franchise (e.g., Taskmaster NZ, Kongen Befaler); I wanted the calculations applied to all series, rather than just the original UK version. 
+				I referenced Jack Bernhardt's spreadsheet for the calculations and to double-check my work. 
+				<br><br>
+				At the end of it all, I was able to engage with a TV series I enjoyed more because I was able to visualize the data rather than just 
+				seeing them as numbers. The points are meaningless, but I was able to create radar graphs, bump charts, and bar graphs. I could use 
+				parameters to filter out for the highest score of each category and which contestant achieved that score. 
+				If you would like to interact with the published dashboard, you can click on "Tableau" over on the right.
+				Unfortunately, when I publish to Tableau Public, not all the formatting carried over. 
+				<br><br>
+				<b><i>Next Steps: </i></b>Create worksheets that compare across series and across franchises.
+				<br><br>
+				<img id="myImg" src="./project_007_TaskmasterDashboard/series5.jpg" alt="Series 5" style="width:10%;max-width:1601px;border: 1px solid #555;">
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				<!-- The Close Button -->
+				<span class="close">&times;</span>
+				<!-- Modal Content (The Image) -->
+				<img class="modal-content" id="Taskmaster">
+				<!-- Modal Caption (Image Text) -->
+				<div id="caption">Taskmaster Dashboard</div>
+				</div>
+				<br><br>
+				<i>Software: Tableau</i>
+				<br><br>
+			</div> <!-- end of Taskmaster_dashboard description-->
+			<div class="grid-item"><a href="https://public.tableau.com/views/Taskmaster_17394115892310/CurrentSeason?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">Tableau</a> </div>
 
-				<div class="grid-item">
-					Automatic essay scoring (AES) is a machine learning problem where essays are parsed through 
-					a machine learning model and a score is assigned. Since a score is assigned by a machine, it must 
-					be unbiased...right? I explore the performance of a BERT-base-cased model that is fine-tuned on 
-					student essays and the predicted scores of two different datasets. Furthermore, I test the performance 
-					of the model and whether it will vary based on prompt.
-					<br><br>
-					I use two datasets: the ASAP-AES (train only) dataset and ELLIPSE corpus. The ASAP-AES dataset is 
-					assumed to be composed of essays that are written by students in general,  but the ELLIPSE corpus 
-					contains essays that are specifically written by English Language Learners (ELLs).
-					<br><br>
-					There are problems with using two different datasets. The first is that both datasets use different scores. As the 
-					goal of this project is to see if there is any differences in the predicted scores, it should be sufficient to look at the 
-					distribution when comparing. The second is that the ASAP-AES dataset doesn't have consistent scoring criteria amongst its own
-					sets. 
-					<br><br>
-					I played around with the training and test data to see what happens when I add more and more ASAP-AES essay sets into the training data and using the other sets as a test set. 
-					This is to mimic what would happen if the structure of an essay is the same, but the prompt changes from year to year. 
-					The accuracy of the ASAP-AES test set increases with more essays, 
-					but only if the scoring criteria doesn't change drastically. 
-					Once the scoring criteria changes, especially with Sets 6 and 7, the model fails to predict any ASAP-AES scores. 
-					When all the sets were mixed together and 10% was reserved for the test set, I have an accuracy of about 57.7%. 
-					<br><br>
-					Generally, the ELLIPSE Corpus received a higher predicted score than the ASAP-AES essays so it doesn't seem to be biased against ELLs. 
-					Even when the ASAP-AES training data was varied, the predictions on the ELLIPSE 
-					test data was generally the same, but the only model which has a mixture of all 8 sets as part of the training data (only 90% of the ASAP-AES set) was able to predict 
-					scores higher than 20. This shows how much the model depends on the training data it is fine-tuned on and the failures of interpreting the scores outputted
-					(i.e., the same essay can receive a score of 4 or 10 and it's not clear why it's different other than the training data).
-					<br><br>
-					While building this, I followed a guide and adapted most of the code from the guide for use in AES_2_model_no_custom.ipynb and AES_3_model_set_order.ipynb.
-					<br><br>
-					<i>Update (Feb 3, 2025):</i> I updated to include notebooks where I developed a smooth version of a quadratic weighted kappa loss function and 
-					use it in the model. Unfortunately, the model is overfitting and memorizing the predictions.
-					<br><br>
-					<b><i>Next Steps: </i></b> Update the notebooks to use a quadratic weighted kappa as a metric rather than accuracy. Fix the smooth quadratic weighted kappa function.
-					<br>
+			<div class="grid-item">Automatic Essay Scoring</div>
+			<div class="grid-item">
+				Automatic essay scoring (AES) is a machine learning problem where essays are parsed through 
+				a machine learning model and a score is assigned. Since a score is assigned by a machine, it must 
+				be unbiased...right? I explore the performance of a BERT-base-cased model that is fine-tuned on 
+				student essays and the predicted scores of two different datasets. Furthermore, I test the performance 
+				of the model and whether it will vary based on prompt.
+				<br><br>
+				I use two datasets: the ASAP-AES (train only) dataset and ELLIPSE corpus. The ASAP-AES dataset is 
+				assumed to be composed of essays that are written by students in general,  but the ELLIPSE corpus 
+				contains essays that are specifically written by English Language Learners (ELLs).
+				<br><br>
+				There are problems with using two different datasets. The first is that both datasets use different scores. As the 
+				goal of this project is to see if there is any differences in the predicted scores, it should be sufficient to look at the 
+				distribution when comparing. The second is that the ASAP-AES dataset doesn't have consistent scoring criteria amongst its own
+				sets. 
+				<br><br>
+				I played around with the training and test data to see what happens when I add more and more ASAP-AES essay sets into the training data and using the other sets as a test set. 
+				This is to mimic what would happen if the structure of an essay is the same, but the prompt changes from year to year. 
+				The accuracy of the ASAP-AES test set increases with more essays, 
+				but only if the scoring criteria doesn't change drastically. 
+				Once the scoring criteria changes, especially with Sets 6 and 7, the model fails to predict any ASAP-AES scores. 
+				When all the sets were mixed together and 10% was reserved for the test set, I have an accuracy of about 57.7%. 
+				<br><br>
+				Generally, the ELLIPSE Corpus received a higher predicted score than the ASAP-AES essays so it doesn't seem to be biased against ELLs. 
+				Even when the ASAP-AES training data was varied, the predictions on the ELLIPSE 
+				test data was generally the same, but the only model which has a mixture of all 8 sets as part of the training data (only 90% of the ASAP-AES set) was able to predict 
+				scores higher than 20. This shows how much the model depends on the training data it is fine-tuned on and the failures of interpreting the scores outputted
+				(i.e., the same essay can receive a score of 4 or 10 and it's not clear why it's different other than the training data).
+				<br><br>
+				While building this, I followed a guide and adapted most of the code from the guide for use in AES_2_model_no_custom.ipynb and AES_3_model_set_order.ipynb.
+				<br><br>
+				<i>Update (Feb 3, 2025):</i> I updated to include notebooks where I developed a smooth version of a quadratic weighted kappa loss function and 
+				use it in the model. Unfortunately, the model is overfitting and memorizing the predictions.
+				<br><br>
+				<b><i>Next Steps: </i></b> Update the notebooks to use a quadratic weighted kappa as a metric rather than accuracy. Fix the smooth quadratic weighted kappa function.
 				<br>
-				<i>
-					Language: Python<br>
-					Statistics: Numpy, Pandas, PyTorch, PIL, wordcloud, transformers, MatPlotLib, Seaborn, scikit-learn, transformers, time, datetime,
-					SciPy<br>
-					Statistics: Large Language Model
+				<br>
+			<i>
+				Language: Python<br>
+				Statistics: Numpy, Pandas, PyTorch, PIL, wordcloud, transformers, MatPlotLib, Seaborn, scikit-learn, transformers, time, datetime,
+				SciPy<br>
+				Statistics: Large Language Model
+			</i>
+			<br>
+			<br>
+			</div> <!-- end of AES description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_006_AES" target="_blank">GitHub</a> </div>
+			
+			<div class="grid-item">Identifying Bad Datasets</div>
+			<div class="grid-item">
+				Online forums recognize that they are a treasure trove for data mining as their data is used to train models, 
+				and companies have taken to paywalling API access to them, most notably Reddit and X (formerly Twitter).
+				So why is training data valuable? I dive into what happens to a model when it attempts to answer a 
+				particular question where the training data isn't the best, but is publicly available. It is also a lesson 
+				in critical thinking with data, and why we can't take promises at their face value.
+				<br><br>
+				I use two wildfire datasets taken from Kaggle in this write up. I find that using the first dataset 
+				to create a neural net model isn't truly predicting wildfires despite its ~90% accuracy and 
+				instead likely predicting urbanism. The second dataset is a wildfire dataset that contains a lot information 
+				on the fires, where they occurred, how large they were, how long it burned for, and more. I recognized 
+				that it was likely more useful than the first in predicting wildfires, but there was no specific "outline" for 
+				how to use the information. 
+				<br><br>
+				I originally used these datasets in my graduate program 
+				as part of a group project, and am reusing some of the code from that project in the write up. The chunks
+				that are not from my code are denoted.
+				<br>
+				<br>
+			<i>
+				Language: Python<br>
+				Statistics: Numpy, Pandas, MatPlotLib, PIL, folium, cv2, sk-learn, TensorFlow, random, pickle, os, json, 
+				landsatxplore, tifffile
+			</i>
+			<br>
+			<br>
+			</div> <!-- end of bad_dataset description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_005_IdentifyingBadData" target="_blank">GitHub</a></div>		
+
+			<div class="grid-item">Do English Language Learners Write Like Published Authors?</div>
+			<div class="grid-item">
+				For our DATASCI W266 (Natural Language Processing with Deep Learning) class,
+				Srila and I examined whether the performance of BERT models could be improved in scoring 
+				essays written by English Language Learners (ELLs).
+				Prior studies suggest that the pre-trained data (Google BooksCorpus and Wikipedia) 
+				of BERT was unsuited for automatic essay scoring,
+				thus we decided to experiment with unfreezing the pretrained layers of BERT-base-cased and BERTweet-base.
+				We decided to also experiment with BERTweet because it is pretrained on Tweets,
+				and we are hoping that its informal nature will be more reminiscent of student writing.
+				<br><br>
+				We find that depending less on the pretraining weights (with more layers unfrozen) provided more accurate predictions 
+				but BERT-base-cased outperformed BERTweet-base suggesting that student essays belonged to a different population than Tweets.
+				Together, the results indicate that ELL student essays don't contain writing similar to published authors (Google BooksCorpus), 
+				Wikipedia editors, or Tweets; therefore, models that don't contain training specific to student essays 
+				are unlikely to produce scores that reflect their actual grade.
+				<br><br>
+				Srila wrote the majority of the code while I did the background research, piecing the code together,
+				and the writing.
+				<br><br>
+				<i>Language: Python<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, transformers, sklearn, nltk, wordcloud, scipy, yellowbrick, torch<br>
+				Architecture: Tensorflow and Keras<br>
+				Statistics: Summary statistics</i>
+				<br>
+				<br>
+			</div> <!-- end of ELL description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_004_DoELLStudentsWriteLikePublishedAuthors" target="_blank">GitHub</a></div>
+
+			<div class="grid-item">Phishing for Significance</div>
+			<div class="grid-item">
+				For our DATASCI W241 (Experiments and Causal Inference) class, 
+				my group and I were concerned about whether cybersecurity training could be improved so that less students would 
+				be victims of online recruitment fraud.
+				<br><br>
+				At the time this project occurred, there was no cybersecurity training that was provided to the students, 
+				and the university only offered "Fight the Phish" posters which we had to search for ourselves. 
+				We created a multi-factorial experiment where we used a survey to test whether having interactive cybersecurity training, as compared to training where 
+				which only requires reading, would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
+				In order to ensure that the respondents weren't just clicking through the training, we also included a timer so that the respondents 
+				had to stop and read through the training. For the measurement of the results, there were 10 emails, 
+				5 of which are real recruitment emails sent to the three of us but with the names changed and 5 of which are fake emails I wrote.
+				<br><br>
+				We find that there is no statistically significant difference in the identification rates between the students who 
+				received the interactive training vs. the passive training. The responses indicated that the emails looked "phishy"
+				in the first place, but a chi-square test revealed that there's no statistically significant difference between identifying
+				emails as phishing and whether they were actual phishing emails in the first place. The timer did not improve the respondent's 
+				accuracy rates of identifying phishing emails either.
+				<br><br>
+				While this was originally done in conjunction with Angelique Agho and Srila Maiti,
+				most of the Qualtrics programming, R code, and writing is mine.
+				<br><br>
+				<i>Qualtrics link: <a href="https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg">
+					https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
+				Language: R<br>
+				R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
+				Statistics: Summary statistics, linear regression, A/B testing
 				</i>
 				<br>
 				<br>
-				</div> <!-- end of the AES description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_006_AES">
-					Link</a>
-				</div>
-
-				<div class="grid-item">Identifying Bad Datasets</div>
-				<div class="grid-item">
-					Online forums recognize that they are a treasure trove for data mining as their data is used to train models, 
-					and companies have taken to paywalling API access to them, most notably Reddit and X (formerly Twitter).
-					So why is training data valuable? I dive into what happens to a model when it attempts to answer a 
-					particular question where the training data isn't the best, but is publicly available. It is also a lesson 
-					in critical thinking with data, and why we can't take promises at their face value.
-					<br><br>
-					I use two wildfire datasets taken from Kaggle in this write up. I find that using the first dataset 
-					to create a neural net model isn't truly predicting wildfires despite its ~90% accuracy and 
-					instead likely predicting urbanism. The second dataset is a wildfire dataset that contains a lot information 
-					on the fires, where they occurred, how large they were, how long it burned for, and more. I recognized 
-					that it was likely more useful than the first in predicting wildfires, but there was no specific "outline" for 
-					how to use the information. 
-					<br><br>
-					I originally used these datasets in my graduate program 
-					as part of a group project, and am reusing some of the code from that project in the write up. The chunks
-					that are not from my code are denoted.
-					<br>
-				<br>
-				<i>
-					Language: Python<br>
-					Statistics: Numpy, Pandas, MatPlotLib, PIL, folium, cv2, sk-learn, TensorFlow, random, pickle, os, json, 
-					landsatxplore, tifffile
-				</i>
-				<br>
-				<br>
-				</div> <!-- end of the bad_dataset description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_005_IdentifyingBadData">
-					Link</a>
-				</div>
-
-				<div class="grid-item">Do English Language Learners Write Like Published Authors?</div>
-				<div class="grid-item">
-					For our DATASCI W266 (Natural Language Processing with Deep Learning) class,
-					Srila and I examined whether the performance of BERT models could be improved in scoring 
-					essays written by English Language Learners (ELLs).
-					Prior studies suggest that the pre-trained data (Google BooksCorpus and Wikipedia) 
-					of BERT was unsuited for automatic essay scoring,
-					thus we decided to experiment with unfreezing the pretrained layers of BERT-base-cased and BERTweet-base.
-					We decided to also experiment with BERTweet because it is pretrained on Tweets,
-					and we are hoping that its informal nature will be more reminiscent of student writing.
-					<br><br>
-					We find that depending less on the pretraining weights (with more layers unfrozen) provided more accurate predictions 
-					but BERT-base-cased outperformed BERTweet-base suggesting that student essays belonged to a different population than Tweets.
-					Together, the results indicate that ELL student essays don't contain writing similar to published authors (Google BooksCorpus), 
-					Wikipedia editors, or Tweets; therefore, models that don't contain training specific to student essays 
-					are unlikely to produce scores that reflect their actual grade.
-					<br><br>
-					Srila wrote the majority of the code while I did the background research, piecing the code together,
-					and the writing.
-					<br><br>
-					<i>Language: Python<br>
-					Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, transformers, sklearn, nltk, wordcloud, scipy, yellowbrick, torch<br>
-					Architecture: Tensorflow and Keras<br>
-					Statistics: Summary statistics</i>
-					<br><br>
-				</div> <!-- end of the ELL description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_004_DoELLStudentsWriteLikePublishedAuthors">
-					Link</a>
-				</div>
-
-				<div class="grid-item">Phishing for Significance</div>
-				<div class="grid-item">
-					For our DATASCI W241 (Experiments and Causal Inference) class, 
-					my group and I were concerned about whether cybersecurity training could be improved so that less students would 
-					be victims of online recruitment fraud.
-					<br><br>
-					At the time this project occurred, there was no cybersecurity training that was provided to the students, 
-					and the university only offered "Fight the Phish" posters which we had to search for ourselves. 
-					We created a multi-factorial experiment where we used a survey to test whether having interactive cybersecurity training, as compared to training where 
-					which only requires reading, would increase the accuracy rate of identification rate of phishing emails that are targeted to students.
-					In order to ensure that the respondents weren't just clicking through the training, we also included a timer so that the respondents 
-					had to stop and read through the training. For the measurement of the results, there were 10 emails, 
-					5 of which are real recruitment emails sent to the three of us but with the names changed and 5 of which are fake emails I wrote.
-					<br><br>
-					We find that there is no statistically significant difference in the identification rates between the students who 
-					received the interactive training vs. the passive training. The responses indicated that the emails looked "phishy"
-					in the first place, but a chi-square test revealed that there's no statistically significant difference between identifying
-					emails as phishing and whether they were actual phishing emails in the first place. The timer did not improve the respondent's 
-					accuracy rates of identifying phishing emails either.
-					<br><br>
-					While this was originally done in conjunction with Angelique Agho and Srila Maiti,
-					most of the Qualtrics programming, R code, and writing is mine.
-					<br><br>
-					<i>Qualtrics link: <a href="https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg">
-						https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
-					Language: R<br>
-					R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
-					Statistics: Summary statistics, linear regression, A/B testing
-					</i>
-					<br>
-					<br>
-				</div> <!--end of the Phising_for_significance description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_002_PhishingForSignificance">
-					Link</a>
-				</div>
-
-				<div class="grid-item">LA Traffic Collisions</div>
-				<div class="grid-item">
-					Vision Zero's goal is to eliminate traffic fatalities and severe injuries. Los Angeles (LA) is infamous for its traffic and high speed highway chases, 
-					and it adopted Vision Zero in 2015 in an attempt to reduce the
-					traffic deaths to 0. There is inconsistent messaging on whether it is aimed at LA as a whole or only on unincorporated county roadways.
-					The analysis is based on Vision Zero's impact on LA as a whole. 
-					<br><br>
-					Using LA City's Traffic Collision data, I did some exploratory data analysis and regression discontinuity analysis on the number of traffic collisions, the number of victims, and the number of victims
-					with severe or fatal injuries. For the most part, the collisions increased from 2015 onwards until COVID-19 was declared a pandemic.
-					Most of the collisions were in streets (95.4%) and parking lots (3.2%). There are certain intersections 
-					(e.g., the intersection of Sepulveda Blvd and Sherman Way) where there are more collisions. 
-					Most collisions were vehicle vs. vehicle collisions, but not all them resulted in a severe or fatal injury.
-					Out of 370,447 collisions which has a code associated with injury, only 13,794 (~3.7%) had a report of a severe or fatal injury.
-					The regression discontinuity analysis determined that there was a staistically significant reduction in the number of traffic collisions, 
-					likely due to the  COVID-19 pandemic, but not due to Vision Zero. In fact, after Vision Zero was signed, 
-					there was an increase in the number of collisions. However, there seemed to be little to no difference in the number of 
-					collisions with severe or fatal injuries regardless of whether Vision Zero was signed or Covid-19 declared as a pandemic. 
-					<br><br>
-					While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together where we only did data exploration, I redid the writing and the code to be mine.
-					<br><br>
-					<i>Update (Nov 10, 2024):</i> I updated this analysis to include a regression discontinuity design.
-					The regression discontinuity design evaluates the effect of Vision Zero as well as the Covid-19 pandemic
-					on the number of collisions, the number of victims, and the number of collisions where there were severe or fatal injuries
-					recorded.
-					<br><br>
-					<i>Update (Feb 10, 2025):</i> I re-ran the analysis on only the unincorporated areas of LA. There was no statistical significance 
-					from the regression discontinuity test where the cutoff is when Vision Zero was signed. There was statistical significance due to 
-					the declaration of Covid-19 as a pandemic. When analyzing only the collisions where there was a severe or fatal injuries, I 
-					was not able to run an analysis but visually, there was no change (it was only 1 collision a day throughout). Vision Zero 
-					appears to be ineffective in the unincorporated areas. If it were effective, it should be enacted on the incorporated areas 
-					because that is where more collisions occur and contains more collisions with fatal or severe injuries.
-					<br><br>
-					<b><i>Next steps:</i></b> Figure out what the other regression discontinuity graphs from the example does and mean.
-					<br><br>
-					<i>Language: Python<br>
-					Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium, rdrobust<br>
-					Statistics: Summary statistics, Regression Discontinuity with robust standard errors</i>
-					<br>
-					<br>
-				</div> <!-- end of the la_traffic_collisions description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_001_LATrafficCollisions">
-					Link</a>
-				</div>
-
-				<div class="grid-item">LinkedIn Recommendations in a Word Cloud</div>
-				<div class="grid-item">
-					I've previously used Word Clouds through my work, so I was interested in exploring 
-					how they functioned for myself through R and Tableau. 
-					Additionally, I wanted to see if there were any common words that 
-					people used to describe in their recommendations on LinkedIn so I combined these two desires.
-					<br><br>
-					The coding and write up was done by me.
-					<br>
-				<br>
-				<i>
-					Language: R<br>
-					R Libraries: readxl, writexl, tm, tau, tidyr, RColorBrewer, wordcloud, wordcloud2,
-					tidyverse, reshape2<br>
-					Software: Tableau<br>
-					Statistics: Bag of Words
-				</i>
+			</div> <!-- end of phishing description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_002_PhishingForSignificance" target="_blank">GitHub</a></div>
+			
+			<div class="grid-item">LA Traffic Collisions</div>
+			<div class="grid-item">
+				Vision Zero's goal is to eliminate traffic fatalities and severe injuries. Los Angeles (LA) is infamous for its traffic and high speed highway chases, 
+				and it adopted Vision Zero in 2015 in an attempt to reduce the
+				traffic deaths to 0. There is inconsistent messaging on whether it is aimed at LA as a whole or only on unincorporated county roadways.
+				The analysis is based on Vision Zero's impact on LA as a whole. 
+				<br><br>
+				Using LA City's Traffic Collision data, I did some exploratory data analysis and regression discontinuity analysis on the number of traffic collisions, the number of victims, and the number of victims
+				with severe or fatal injuries. For the most part, the collisions increased from 2015 onwards until COVID-19 was declared a pandemic.
+				Most of the collisions were in streets (95.4%) and parking lots (3.2%). There are certain intersections 
+				(e.g., the intersection of Sepulveda Blvd and Sherman Way) where there are more collisions. 
+				Most collisions were vehicle vs. vehicle collisions, but not all them resulted in a severe or fatal injury.
+				Out of 370,447 collisions which has a code associated with injury, only 13,794 (~3.7%) had a report of a severe or fatal injury.
+				The regression discontinuity analysis determined that there was a staistically significant reduction in the number of traffic collisions, 
+				likely due to the  COVID-19 pandemic, but not due to Vision Zero. In fact, after Vision Zero was signed, 
+				there was an increase in the number of collisions. However, there seemed to be little to no difference in the number of 
+				collisions with severe or fatal injuries regardless of whether Vision Zero was signed or Covid-19 declared as a pandemic. 
+				<br><br>
+				While this was originally a group project by Ben Meier, Rebecca Sun, and me for our DATASCI W200 class together where we only did data exploration, I redid the writing and the code to be mine.
+				<br><br>
+				<i>Update (Nov 10, 2024):</i> I updated this analysis to include a regression discontinuity design.
+				The regression discontinuity design evaluates the effect of Vision Zero as well as the Covid-19 pandemic
+				on the number of collisions, the number of victims, and the number of collisions where there were severe or fatal injuries
+				recorded.
+				<br><br>
+				<i>Update (Feb 10, 2025):</i> I re-ran the analysis on only the unincorporated areas of LA. There was no statistical significance 
+				from the regression discontinuity test where the cutoff is when Vision Zero was signed. There was statistical significance due to 
+				the declaration of Covid-19 as a pandemic. When analyzing only the collisions where there was a severe or fatal injuries, I 
+				was not able to run an analysis but visually, there was no change (it was only 1 collision a day throughout). Vision Zero 
+				appears to be ineffective in the unincorporated areas. If it were effective, it should be enacted on the incorporated areas 
+				because that is where more collisions occur and contains more collisions with fatal or severe injuries.
+				<br><br>
+				<b><i>Next steps:</i></b> Figure out what the other regression discontinuity graphs from the example does and mean.
+				<br><br>
+				<i>Language: Python<br>
+				Python Libraries: MatPlotLib, Seaborn, Numpy, Pandas, Folium, rdrobust<br>
+				Statistics: Summary statistics, Regression Discontinuity with robust standard errors</i>
 				<br>
 				<br>
-				</div> <!-- end of the linkedin_recommendations_wordcloud description-->
-				<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_003_RecommendationsWordcloud">
-					Link</a>
-				</div>
-			</div> <!-- ending of the grid-row-->
-		</div> <!-- end of the projects tabcontent-->
-
+			</div> <!-- end of LA_traffic description -->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_001_LATrafficCollisions" target="_blank">GitHub Link</a></div>
+			
+			<div class="grid-item">LinkedIn Recommendations in a Word Cloud</div>
+			<div class="grid-item">
+				I've previously used Word Clouds through my work, so I was interested in exploring 
+				how they functioned for myself through R and Tableau. 
+				Additionally, I wanted to see if there were any common words that 
+				people used to describe in their recommendations on LinkedIn so I combined these two desires.
+				<br><br>
+				The coding and write up was done by me.
+				<br>
+				<br>
+			<i>
+				Language: R<br>
+				R Libraries: readxl, writexl, tm, tau, tidyr, RColorBrewer, wordcloud, wordcloud2,
+				tidyverse, reshape2<br>
+				Software: Tableau<br>
+				Statistics: Bag of Words
+			</i>
+			<br>
+			<br>
+			</div> <!-- end of wordcloud description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_003_RecommendationsWordcloud" target="_blank">GitHub Link</a></div>
+		</div> <!-- end of project grid-->
+		<br>
+		<br>
 	
 		<!-- CV -->
-		<div id="CV" class="tabcontent">
+		<div class="cv_describe" id="cv_describe_id">
 			<h2>Experience</h2>
 				<p2><b>University of California, Berkeley</b><br>
 					<i>Reader (Teaching Assistant) | Jan 2023 - Dec 2023</i></p>
@@ -463,22 +471,10 @@ Last Updated: March 21, 2025
 						</ul>
 					</li>
 				</ul>
-		
-	</div> <!-- end of the CV tab content-->
+		</div> <!-- end of CV -->
+	</div> <!-- end of container for everything below slider toggle-->
+</div> <!-- end of everything being centered -->
 
-	<div id="dashboard" class="tabcontent">
-		<div id="main" style="align-items: center;">
-			<tableau-viz id="tableauViz" src="https://public.tableau.com/views/Taskmaster_17394115892310/CurrentSeason"></tableau-viz>
-		</div>
-
-		<script type="module">
-			import { TableauEventType } from 'https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js';
-			const tableauViz = document.getElementById('tableauViz');
-			window.addEventListener('resize', () => tableauViz.resize());
-		</script>
-
-	</div> <!-- end of the dashboard tabcontent-->
-	
 </body>
 <script src="main.js"></script>
 </html>

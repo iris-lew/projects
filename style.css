@@ -16,63 +16,35 @@
     }
 
     .h1 {
-        font-family: "Noticia Text";
+        font-family: "Noticia Text"
     }
     .ul {
-        font-family: "Open Sans";
+        font-family: "Open Sans"
     }
 
-    .tabcontent {
-        display: None;
-        padding: 6px 50px;
-        border: 1px solid #ccc;
-        border-top: none;
+    .container .cv_describe {
+        display: None; /*block*/
+        margin-top: 10px;
+        position: relative;
+        width: 1100px;
+        text-align: left;
+        margin: auto;
     }
 
-    #grid-row {
-        display: grid;
-        grid-template-columns: 200px auto 125px;
-        row-gap: 10px;
+    .container .projects_grid{
+        position: relative;
+        display: inline-grid; /*inline-grid*/
+        grid-template-columns: 150px auto 113px;
+        width: 1100px;
         column-gap: 10px;
-    }    
+        row-gap: 10px;
+        text-align: left;
+    }
 
     .grid-item{
         border-bottom: 1px dotted black;
     }
 
-     /* Style the tab */
-     .tab {
-        overflow: hidden;
-        border: 1px solid #8585ad;
-        background-color: #b3b3cc;
-        text-align: center;
-    }
-    
-    /* Style the buttons that are used to open the tab content */
-    .tab button {
-        background-color: inherit;
-        float: center;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 25px 100px;
-        transition: 0.3s;
-        font-size: 18px;
-        font-family: "Noticia Text";
-    }
-    
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-        background-color: #ccb3b3;
-    }
-    
-    /* Create an active/current tablink class */
-    .tab button.active {
-        background-color: #ccccb3;
-    }
-
-
-    /* THIS IS FOR CIRCULAR TOGGLE
     .button {
         background-color: #9A9A9A;
         border: white;
@@ -114,10 +86,8 @@
         background color: #c2c2d6;
         transition: all 0.5s ease-in-out;
     }
-*/
 
     /* This is the circle button for the toggle */
-    /*
     .toggle .slider::before {
         content: '';
         position: absolute;
@@ -176,5 +146,84 @@
 
     .toggle input:checked~.labels::before{
         opacity: 1;
-    } 
-*/
+    }
+
+     /* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  } 
