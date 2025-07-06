@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-Last Updated: April 21, 2025
+Last Updated: July 5, 2025
 <div style="text-align:center">
 <head>
 	<title>Iris Lew - About Me</title>
@@ -40,6 +40,29 @@ Last Updated: April 21, 2025
 			<div class="grid-item"><b>Title</b></div>
 			<div class="grid-item"><b>Description</b></div>
 			<div class="grid-item"><b>External Links</b></div>
+
+			<div class="grid-item">How Couples Meet</div>
+			<div class="grid-item">
+				<a href="" target="_blank">How Couples Meet and Stay Together 2017 (HCMST 2017)</a> 
+				is a publicly available dataset that asks 3,510 survey respondents 
+				about their relationship. Two follow-up surveys were asked in 2020 and 2022. 
+				<br><br>
+				I decided to make an R Shiny app that displays how these couples met throughout the years. 
+				Their answers were originally recorded as Q24 which was an open-ended response. 
+				The researchers then checked off if the responses matched categories 
+				so some respondents may be represented more than once.
+				<br></br>
+				<iframe height="625" width="100%" frameborder="no" src="http://irislew.shinyapps.io/project_009_q24"> </iframe>
+				<br><br>
+				<b><i>Next Steps: </i></b>Adding more graphs for data exploration and modeling.
+				<br><br>
+				<i>
+					Language: R<br>
+					R Libraries: tidyverse, plotly, shiny, forcats, rsconnect
+				</i>
+				<br><br>
+			</div> <!-- end of Couples description-->
+			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_009_couples" target="_blank">GitHub</a></div>
 
 			<div class="grid-item">Taskmaster Dashboard</div>
 			<div class="grid-item">
@@ -215,7 +238,7 @@ Last Updated: April 21, 2025
 					https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
 				Language: R<br>
 				R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
-				Statistics: Summary statistics, linear regression, A/B testing
+				Statistics: Summary statistics, linear regression, A/B testing, chi-square test
 				</i>
 				<br>
 				<br>
@@ -292,6 +315,19 @@ Last Updated: April 21, 2025
 		<!-- CV -->
 		<div class="cv_describe" id="cv_describe_id">
 			<h2>Experience</h2>
+
+				<p2><b>The Contra Costa Asian American Pacific Islander Advocacy Coalition</b><br>
+					<i>Data Scientist, Community Health Worker, and Advocate | Jan 2023 - Present</i></p2>
+				<ul>
+					<li>Gathered data, including geospatial (GIS) data, for grant applications to bring traffic solutions to the community.</li>
+					<li>Acting as Coalition Community Health Worker and Advocate, 
+						partner with Contra Costa County Health Services to provide vital health education and 
+						outreach to low-income, priority populations in response to recent Tuberculosis outbreak in Richmond, CA.</li>
+					<li>Collaborate with community partners to initiate process of assessing, registering, 
+						and enrolling low-income Asian immigrant community members in Medi-Cal/Medicaid health coverage; 
+						carry out Coalition's Multi-Cultural Community Health Worker Alliance Initiative; 
+						educate public and promote Community Health Worker Benefits Addition under the Cal-AIM Medi-Cal Reform.</li>
+				</ul>
 				<p2><b>University of California, Berkeley</b><br>
 					<i>Reader (Teaching Assistant) | Jan 2, 2023 - Dec 15, 2023</i></p>
 				<ul>
@@ -383,18 +419,7 @@ Last Updated: April 21, 2025
 						by directing and managing crowds of over 100+ ensuring event safety, efficiency, and success. </li>
 				</ul>
 				<br>
-				<p2><b>The Contra Costa Asian American Pacific Islander Advocacy Coalition</b><br>
-					<i>Data Scientist, Community Health Worker, and Advocate | Jan 2023 - Present</i></p2>
-				<ul>
-					<li>Gathered data, including geospatial (GIS) data, for grant applications to bring traffic solutions to the community.</li>
-					<li>Acting as Coalition Community Health Worker and Advocate, 
-						partner with Contra Costa County Health Services to provide vital health education and 
-						outreach to low-income, priority populations in response to recent Tuberculosis outbreak in Richmond, CA.</li>
-					<li>Collaborate with community partners to initiate process of assessing, registering, 
-						and enrolling low-income Asian immigrant community members in Medi-Cal/Medicaid health coverage; 
-						carry out Coalition's Multi-Cultural Community Health Worker Alliance Initiative; 
-						educate public and promote Community Health Worker Benefits Addition under the Cal-AIM Medi-Cal Reform.</li>
-				</ul>
+				
 			<h2>Coaching</h2>
 			<p2><b>Introduction to Tableau | Hanover Research</b><br>
 				I designed a Tableau training and piloted a demonstration of the training to both survey 
