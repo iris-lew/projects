@@ -1,187 +1,202 @@
 *
-    img.my-picture {
-        display: block;
-        margin: 0px;
-        height: 200px;
-        width: auto;
-        border: 2px solid white;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-    }
+img.my-picture {
+    display: block;
+    margin: 0px;
+    height: 200px;
+    width: auto;
+    border: 2px solid white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
 
-    body {
-        margin: 0;
-        background: #F8F7EF;
-    }
+body {
+    margin: 0;
+    background: #F8F7EF;
+}
 
-    .h1 {
-        font-family: "Noticia Text"
-    }
-    .ul {
-        font-family: "Open Sans"
-    }
+.h1 {
+    font-family: "Noticia Text"
+}
+.ul {
+    font-family: "Open Sans"
+}
 
-    .container .cv_describe {
-        display: None; /*block*/
-        margin-top: 10px;
-        position: relative;
-        width: 1100px;
-        text-align: left;
-        margin: auto;
-    }
+.container .cv_describe {
+    display: None; /*block*/
+    margin-top: 10px;
+    position: relative;
+    width: 1100px;
+    text-align: left;
+    margin: auto;
+}
 
-    .container .projects_grid{
-        position: relative;
-        display: inline-grid; /*inline-grid*/
-        grid-template-columns: 150px auto 113px;
-        width: 1100px;
-        column-gap: 10px;
-        row-gap: 10px;
-        text-align: left;
-    }
+.container .projects_grid{
+    position: relative;
+    display: inline-grid; /*inline-grid*/
+    grid-template-columns: 150px auto 113px;
+    width: 1100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: left;
+}
 
-    .grid-item{
-        border-bottom: 1px dotted black;
-    }
+.grid-item{
+    border-bottom: 1px dotted black;
+}
 
-    .button {
-        background-color: #9A9A9A;
-        border: white;
-        -webkit-border-radius: 12px;
-        color: white;
-        padding: 20px 75px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
+.button {
+    background-color: #9A9A9A;
+    border: white;
+    -webkit-border-radius: 12px;
+    color: white;
+    padding: 20px 75px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
-    .toggle {
-        --width: 350px;
-        --height: calc(var(--width)/5);
-        background-color: #b3b3cc;
-        position: relative;
-        display: inline-block;
-        width: var(--width);
-        height: var(--height);
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
-        border-radius: var(--height);
-        cursor: pointer;
-    }
+.toggle {
+    --width: 350px;
+    --height: calc(var(--width)/5);
+    background-color: #b3b3cc;
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+}
 
-    .toggle input{
-        display: none;
-    }
+.toggle input{
+    display: none;
+}
 
-    .toggle .slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: var(--height);
-        background color: #c2c2d6;
-        transition: all 0.5s ease-in-out;
-    }
+.toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background color: #c2c2d6;
+    transition: all 0.5s ease-in-out;
+}
 
-    /* This is the circle button for the toggle */
-    .toggle .slider::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: calc(var(--height));
-        height: calc(var(--height));
-        border-radius: calc(var(--height)/2);
-        background-color: #666699;
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
-        transition: all 0.4s ease-in-out;
-    }
+/* This is the circle button for the toggle */
+.toggle .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height)/2);
+    background-color: #666699;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+    transition: all 0.4s ease-in-out;
+}
 
-    .toggle input:checked + .slider{
-        background-color: #33334d;
-    }
+.toggle input:checked + .slider{
+    background-color: #33334d;
+}
 
-    .toggle input:checked + .slider::before{
-        transform: translateX(calc(var(--width) - var(--height)));
-    }
+.toggle input:checked + .slider::before{
+    transform: translateX(calc(var(--width) - var(--height)));
+}
 
-    .toggle .labels {
-        position: absolute;
-        top: 8px;
-        left: 5px;
-        width: 100%;
-        height: 100%;
-        font-size: 50px;
-        font-family: sans-serif;
-        transition: all 0.4s ease-in-out;
-    }
+.toggle .labels {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
 
-    .toggle .labels::after {
-        content: attr(data-off);
-        position: absolute;
-        right: 20px;
-        color: #4d4d4d;
-        opacity: 1;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        transition: all 0.4s ease-in-out;
-    }
+.toggle .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 20px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    transition: all 0.4s ease-in-out;
+}
 
-    .toggle .labels::before{
-        content: attr(data-on);
-        position: absolute;
-        left: 5px;
-        color: #ffffff;
-        opacity: 0;
-        text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
-        transition: all 0.4s ease-in-out;
-    }
+.toggle .labels::before{
+    content: attr(data-on);
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.4);
+    transition: all 0.4s ease-in-out;
+}
 
-    .toggle input:checked~.labels::after{
-        opacity: 0;
-    }
+.toggle input:checked~.labels::after{
+    opacity: 0;
+}
 
-    .toggle input:checked~.labels::before{
-        opacity: 1;
-    }
+.toggle input:checked~.labels::before{
+    opacity: 1;
+}
 
-     /* Style the Image Used to Trigger the Modal */
+/* gallery for modal images*/
+.gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1px;
+}
+
+/* Style the Image Used to Trigger the Modal */
 #myImg {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-  }
+    object-fit: cover;
+    width: 100px;
+    height: 150px;
+}
   
-  #myImg:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+#myImg:hover {
+    opacity: 0.7;
+    transform: scale(1.1)
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
-  
-  /* Modal Content (Image) */
-  .modal-content {
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (Image) */
+.modal-content {
     margin: auto;
     display: block;
     width: 100%;
     max-width: 700px;
-  }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -190,21 +205,20 @@
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-  }
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
     animation-name: zoom;
     animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
+}
+@keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -212,18 +226,18 @@
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+.close:hover,
+.close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
     .modal-content {
-      width: 100%;
+        width: 100%;
     }
-  } 
+} 

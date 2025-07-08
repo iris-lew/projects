@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-Last Updated: July 5, 2025
+Last Updated: July 7, 2025
 <div style="text-align:center">
 <head>
 	<title>Iris Lew - About Me</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="./project_009_couples/shinylive/load-shinylive-sw.js" type="module"></script>
+				<script type="module">
+				 import { runExportedApp } from "./project_009_couples/shinylive/shinylive.js";
+				 runExportedApp({
+					id: "root",
+					appEngine: "r",
+					relPath: "",
+				});
+				</script>
+				<link rel="stylesheet" href="./project_009_couples/shinylive/style-resets.css" />
+				<link rel="stylesheet" href="./project_009_couples/shinylive/shinylive.css" />
 </head>
 
 <body>
@@ -50,19 +61,33 @@ Last Updated: July 5, 2025
 				I decided to make an R Shiny app that displays how these couples met throughout the years. 
 				Their answers were originally recorded as Q24 which was an open-ended response. 
 				The researchers then checked off if the responses matched categories 
-				so some respondents may be represented more than once.
+				so some respondents may be represented more than once. 
+				The R Shiny App can be accessed by clicking the link at the right. I was unable to embed this 
+				iframe into GitHub pages because GitHub pages does not support the backend Shiny server.
 				<br></br>
-				<iframe height="625" width="100%" frameborder="no" src="http://irislew.shinyapps.io/project_009_q24"> </iframe>
-				<br><br>
+				
+				<div class="gallery">
+					<img class="myImages" id="myImg" src="project_009_couples/images/q24.jpg" 
+					alt="Most common methods for US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_009_couples/images/q24_married.jpg" 
+					alt="Most common methods for married US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_009_couples/images/q24_unmarried_couples.jpg" 
+					alt="Most common methods for unmarried US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+				 </div>
+
+				<br>
 				<b><i>Next Steps: </i></b>Adding more graphs for data exploration and modeling.
 				<br><br>
 				<i>
 					Language: R<br>
-					R Libraries: tidyverse, plotly, shiny, forcats, rsconnect
+					R Libraries: tidyverse, plotly, shiny, forcats, rsconnect, shinylive, httpuv
 				</i>
 				<br><br>
 			</div> <!-- end of Couples description-->
-			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_009_couples" target="_blank">GitHub</a></div>
+			<div class="grid-item">
+				<a href="https://github.com/iris-lew/projects/tree/main/project_009_couples" target="_blank">GitHub</a><br>
+				<a href="http://irislew.shinyapps.io/project_009_q24" target="_blank">Shiny App</a>
+			</div>
 
 			<div class="grid-item">Taskmaster Dashboard</div>
 			<div class="grid-item">
@@ -85,17 +110,19 @@ Last Updated: July 5, 2025
 				<br><br>
 				<b><i>Next Steps: </i></b>Create worksheets that compare across series and across franchises.
 				<br><br>
-				<img id="myImg" src="./project_007_TaskmasterDashboard/series5.jpg" alt="Series 5" style="width:10%;max-width:1601px;border: 1px solid #555;">
-				<!-- The Modal -->
-				<div id="myModal" class="modal">
-				<!-- The Close Button -->
-				<span class="close">&times;</span>
-				<!-- Modal Content (The Image) -->
-				<img class="modal-content" id="Taskmaster">
-				<!-- Modal Caption (Image Text) -->
-				<div id="caption">Taskmaster Dashboard</div>
+				
+				<div id="gallery", class="gallery">
+
+					<img class="myImages" id="myImg" src="./project_007_TaskmasterDashboard/series5.jpg" alt="Series 5" style="border: 1px solid #555;">
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span> <!-- The Close Button -->
+						<img class="modal-content" id="img01"> <!-- Modal Content (The Image) -->
+						<div id="caption">Image</div> <!-- Modal Caption (Image Text) -->
+					</div>
 				</div>
-				<br><br>
+
+				<br>
 				<i>Software: Tableau</i>
 				<br><br>
 			</div> <!-- end of Taskmaster_dashboard description-->
@@ -136,6 +163,15 @@ Last Updated: July 5, 2025
 				<i>Update (Feb 3, 2025):</i> I updated to include notebooks where I developed a smooth version of a quadratic weighted kappa loss function and 
 				use it in the model. Unfortunately, the model is overfitting and memorizing the predictions.
 				<br><br>
+				<div class="gallery">
+					<img class="myImages" id="myImg" src="project_006_AES/images/score_set_counts.jpg" 
+					alt="The distribution of scores per set in the ASAP-AES training dataset" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_006_AES/images/train_valid_loss_curve_no_custom.jpg" 
+					alt="The training and validation loss curve per epoch with a BERT-base-cased model (no custom loss function)" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_006_AES/images/comparison_no_custom_test.jpg" 
+					alt="A comparison of the distribution of predicted scores on the ASAP-AES and ELLIPSE corpus test datasets (no custom loss function)" style="border: 1px solid #555;">
+				 </div>
+				 <br>
 				<b><i>Next Steps: </i></b> Update the notebooks to use a quadratic weighted kappa as a metric rather than accuracy. Fix the smooth quadratic weighted kappa function.
 				<br>
 				<br>
@@ -169,7 +205,19 @@ Last Updated: July 5, 2025
 				I originally used these datasets in my graduate program 
 				as part of a group project, and am reusing some of the code from that project in the write up. The chunks
 				that are not from my code are denoted.
-				<br>
+				<br><br>
+				<div id="gallery", class="gallery">
+					<img class="myImages" id="myImg" src="project_005_IdentifyingBadData/images/canada_sample_images.jpg" 
+					alt="A sample of the wildfire and no wildfire images in the Canada dataset from Kaggle" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_005_IdentifyingBadData/images/canada_map_wildfire.jpg" 
+					alt="Heatmap of the coordinates of the wildfire images" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_005_IdentifyingBadData/images/canada_map_nowildfire.jpg" 
+					alt="Heatmap of the coordinates of the no wildfire images" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_005_IdentifyingBadData/images/sample_incorrectly_identified_data.jpg" 
+					alt="Sample of when prediction model incorrectly identifies data" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_005_IdentifyingBadData/images/landsat_satellite.jpg" 
+					alt="Example of an image from the Landsat Satellites after compiling RGB data" style="border: 1px solid #555;">
+				</div>
 				<br>
 			<i>
 				Language: Python<br>
@@ -202,6 +250,11 @@ Last Updated: July 5, 2025
 				Srila wrote the majority of the code while I did the background research, piecing the code together,
 				and the writing.
 				<br><br>
+				<div class="gallery">
+					<img class="myImages" id="myImg" src="project_004_DoELLStudentsWriteLikePublishedAuthors/images/adjusted_MCRMSE_scores.jpg"
+					alt="Adjusted MCRMSE scores per model built" style="border: 1px solid #555;">
+				 </div>
+				<br>
 				<i>Language: Python<br>
 				Python Libraries: MatPlotLib, Seaborn, NumPy, Pandas, transformers, sklearn, nltk, wordcloud, SciPy, yellowbrick, Torch<br>
 				Architecture: TensorFlow and Keras<br>
@@ -234,14 +287,22 @@ Last Updated: July 5, 2025
 				While this was originally done in conjunction with Angelique Agho and Srila Maiti,
 				most of the Qualtrics programming, R code, and writing is mine.
 				<br><br>
+				<div class="gallery">
+					<img class="myImages" id="myImg" src="project_002_PhishingForSignificance/images/power_analysis.jpg"
+					alt="Power Analysis to determine sample size necessary for experiment" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_002_PhishingForSignificance/images/student_identification.jpg"
+					alt="Number of students that identified the emails as phishing or legitimate" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_002_PhishingForSignificance/images/percentage_correct.jpg"
+					alt="Histograms of the percentage correctly identified by treatment condition" style="border: 1px solid #555;">
+				 </div>
+				<br>
 				<i>Qualtrics link: <a href="https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg">
 					https://berkeley.qualtrics.com/jfe/form/SV_0HZ8Urm7Wng0zzg</a><br>
 				Language: R<br>
 				R Libraries: data.table, lmtest, sandwich, reshape2, stargazer, diagram, tidyverse, ggpubr<br>
 				Statistics: Summary statistics, linear regression, A/B testing, chi-square test
 				</i>
-				<br>
-				<br>
+				<br><br>
 			</div> <!-- end of phishing description-->
 			<div class="grid-item"><a href="https://github.com/iris-lew/projects/tree/main/project_002_PhishingForSignificance" target="_blank">GitHub</a></div>
 			
@@ -277,6 +338,21 @@ Last Updated: July 5, 2025
 				appears to be ineffective in the unincorporated areas. If it were effective, it should be enacted on the incorporated areas 
 				because that is where more collisions occur and contains more collisions with fatal or severe injuries.
 				<br><br>
+				<!-- start of images-->
+				 <div class="gallery">
+					<img class="myImages" id="myImg" src="project_001_LATrafficCollisions/images/all_la_map.jpg" 
+					alt="Map of traffic collisions in LA from 2010-2021" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_001_LATrafficCollisions/images/unincorporated_la_map.jpg" 
+					alt="Map of traffic collisions in unincorporated LA from 2010-2021" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_001_LATrafficCollisions/images/unincorporated_collisions_cumulative_count.jpg" 
+					alt="A cumulative sum of the traffic collisions in unincorporated LA from 2010-2021" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_001_LATrafficCollisions/images/unincorporated_collisions_day.jpg" 
+					alt="The number of traffic collisions per day in unincorporated LA from 2010-2021" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_001_LATrafficCollisions/images/unincorporated_collisions_day_sevfat.jpg" 
+					alt="The number of severe or fatal traffic collisions per day in unincorporated LA from 2010-2021" style="border: 1px solid #555;">
+				 </div>
+				<!-- end of images -->
+				<br>
 				<b><i>Next steps:</i></b> Figure out what the other regression discontinuity graphs from the example does and mean.
 				<br><br>
 				<i>Language: Python<br>
