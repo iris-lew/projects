@@ -2,6 +2,8 @@ load("~/HCMST 2017 to 2022 small public version 2.2.rdata")
 d <- `HCMST small public version 2.2`
 colnames(d) <- tolower(colnames(d))
 
+DateUpdated <- "July 8, 2025"
+
 # Packages and libraries
 
 # Package names
@@ -69,8 +71,14 @@ year_q24 <- year_q24 %>%
          w1_partnership_status = recode(w1_partnership_status,
                                         '1' = 'Married',
                                         '2' = 'Unmarried Partners',
-                                        '3' = 'Singles But Had Past Partners',
+                                        '3' = 'Single But Had Past Partners',
                                         '4' = 'Single And Never Had Partners'))
+
+year_q24$w1_partnership_status <- factor(year_q24$w1_partnership_status, 
+                                         levels = c("Married",
+                                                    "Unmarried Partners",
+                                                    "Single But Had Past Partners",
+                                                    "Single And Never Had Partners"))
 
 
 year_q24 %>%
@@ -83,9 +91,14 @@ year_q24 <- year_q24[year_q24$w1_partnership_status!="Single And Never Had Partn
 lookup <- c(year = "w1_q21a_year", how_met = "name", partnership_status = "w1_partnership_status")
 year_q24 <- rename(year_q24, all_of(lookup))
 year_q24
-# save(year_q24, file="./data/q24.rdata")
-# load("data/q24.rdata")
+save(year_q24, file="./app/data/q24.rdata")
+# load("app/data/q24.rdata")
 
+year_q24 %>%
+  group_by(partnership_status) %>%
+  summarise(tot = sum(total, na.rm=T))
+
+year_q24$partnership_status
 
 year_q24[is.na(year_q24$total),]
 unique(year_q24[["total"]])
@@ -94,7 +107,7 @@ max(year_q24[["total"]])
 plot <- ggplot(data = year_q24, aes(x=year, y=total)) +
   geom_line(aes(colour=how_met)) +
   labs(x = "Year They Met", y = "Number of Couples", colour = "How They Met") +
-  ggtitle("Most Common Methods for Couples to Meet Throughout the Years") +
+  ggtitle("Most Common Methods for US Couples to Meet Throughout the Years") +
   scale_y_continuous(limits = c(0,50),
                      breaks = seq(0, 50, by=10))
 
@@ -118,7 +131,7 @@ morethan15 <- year_q24 %>%
 ui <- fluidPage(
   htmlOutput('UpdatedDate'),
   p(''),
-  titlePanel("Most Common Methods for Couples to Meet Throughout the Years"),
+  titlePanel("Most Common Methods for US Couples to Meet Throughout the Years"),
   fluidRow(
     column(width = 3,
            selectInput("how_met",
@@ -129,13 +142,9 @@ ui <- fluidPage(
     column(width = 3,
            selectInput("couple_status",
                        "Couple Status", 
-                       choices = factor(unique(year_q24$partnership_status),
-                                        levels = c("Married",
-                                                   "Unmarried Partners",
-                                                   "Singles But Had Past Partners",
-                                                   "Single And Never Had Partners")), 
+                       choices = c("Married","Unmarried Partners","Single But Had Past Partners"), 
                        multiple = TRUE,
-                       selected = unique(year_q24$partnership_status)),)
+                       selected = c("Married","Unmarried Partners","Single But Had Past Partners")))
   ),
   plotOutput("plot"),
   htmlOutput('NAtext'),

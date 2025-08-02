@@ -10,7 +10,7 @@ library(forcats)
 load("data/q24.rdata")
 
 # Prep
-DateUpdated <- Sys.Date()
+DateUpdated <- "July 8, 2025"
 
 # actual server function
 function(input, output, session){

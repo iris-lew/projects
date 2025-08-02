@@ -20,7 +20,7 @@ morethan15 <- year_q24 %>%
 ui <- fluidPage(
   htmlOutput('UpdatedDate'),
   p(''),
-  titlePanel("Most Common Methods for Couples to Meet Throughout the Years"),
+  titlePanel("Most Common Methods for US Couples to Meet Throughout the Years"),
   fluidRow(
     column(width = 3,
            selectInput("how_met",
@@ -31,13 +31,13 @@ ui <- fluidPage(
     column(width = 3,
            selectInput("couple_status",
                        "Couple Status", 
-                       choices = factor(unique(year_q24$partnership_status),
-                                        levels = c("Married",
-                                                   "Unmarried Partners",
-                                                   "Singles But Had Past Partners",
-                                                   "Single And Never Had Partners")), 
+                       choices = c("Married",
+                                   "Unmarried Partners",
+                                   "Singles But Had Past Partners"), 
                        multiple = TRUE,
-                       selected = unique(year_q24$partnership_status)),)
+                       selected = c("Married",
+                                    "Unmarried Partners",
+                                    "Singles But Had Past Partners")))
   ),
   plotOutput("plot"),
   htmlOutput('NAtext'),

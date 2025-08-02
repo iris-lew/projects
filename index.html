@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-Last Updated: July 7, 2025
+Last Updated: August 2, 2025
 <div style="text-align:center">
 <head>
 	<title>Iris Lew - About Me</title>
@@ -57,26 +57,36 @@ Last Updated: July 7, 2025
 				<a href="" target="_blank">How Couples Meet and Stay Together 2017 (HCMST 2017)</a> 
 				is a publicly available dataset that asks 3,510 survey respondents 
 				about their relationship. Two follow-up surveys were asked in 2020 and 2022. 
+				I analyzed the dataset by creating dashboards using R Shiny. The apps are available by 
+				clicking the link on the right.
 				<br><br>
-				I decided to make an R Shiny app that displays how these couples met throughout the years. 
-				Their answers were originally recorded as Q24 which was an open-ended response. 
-				The researchers then checked off if the responses matched categories 
-				so some respondents may be represented more than once. 
-				The R Shiny App can be accessed by clicking the link at the right. I was unable to embed this 
-				iframe into GitHub pages because GitHub pages does not support the backend Shiny server.
+				Dashboard 1: I created an interactive line graph which shows the most commmon methods for US couples to meet from 1939 to 2017.
+				Filters (multiple select) include how they met and the status of the couple (Married, Unmarried Partners, Singles But Had Past Partners). 
+				Certain datapoints were not included in the line graph because the year they met was not included.
+				<br><br>
+				Dashboard 2: I created a line graph that shows how couples met throughout the years (up to 2017) and a sankey 
+				graph detailing whether they stayed together. The line graph is the same as the one from Dashboard 1 (but needs fixing).
+				The sankey graph shows whether the couples stayed together at 2020 and at 2022. Filters include how they met; 
+				whether the respondent identifies as a lesbian, gay, or bisexual; who wanted to break up (if they did breakup), 
+				and the year they met (a checkbox to indicate whether to keep the respondents who don't have a year response).
 				<br></br>
 				
 				<div class="gallery">
 					<img class="myImages" id="myImg" src="project_009_couples/images/q24.jpg" 
-					alt="Most common methods for US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					alt="Dashboard 1: Most common methods for US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
 					<img class="myImages" id="myImg" src="project_009_couples/images/q24_married.jpg" 
-					alt="Most common methods for married US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					alt="Dashboard 1: Most common methods for married US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
 					<img class="myImages" id="myImg" src="project_009_couples/images/q24_unmarried_couples.jpg" 
-					alt="Most common methods for unmarried US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					alt="Dashboard 1: Most common methods for unmarried US couples to meet from the 1930s to 2017" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_009_couples/images/how_met_stay_together_all.jpg" 
+					alt="Dashboard 2: How Couples Meet and Whether They Stay Together (All)" style="border: 1px solid #555;">
+					<img class="myImages" id="myImg" src="project_009_couples/images/how_met_stay_together_filters.jpg" 
+					alt="Dashboard 2: How Couples Meet and Whether They Stay Together (With Filters Applied)" style="border: 1px solid #555;">
 				 </div>
 
 				<br>
-				<b><i>Next Steps: </i></b>Adding more graphs for data exploration and modeling.
+				<b><i>Next Steps: </i></b>Extending the line graph of Dashboard 2 beyond 2017. 
+				Fix the line graph's legend and labelling. Create models.
 				<br><br>
 				<i>
 					Language: R<br>
@@ -86,7 +96,8 @@ Last Updated: July 7, 2025
 			</div> <!-- end of Couples description-->
 			<div class="grid-item">
 				<a href="https://github.com/iris-lew/projects/tree/main/project_009_couples" target="_blank">GitHub</a><br>
-				<a href="http://irislew.shinyapps.io/project_009_q24" target="_blank">Shiny App</a>
+				<a href="http://irislew.shinyapps.io/project_009_q24" target="_blank">Dashboard 1</a><br>
+				<a href="https://irislew.shinyapps.io/project_009_staytogether" target="_blank">Dashboard 2</a>
 			</div>
 
 			<div class="grid-item">Taskmaster Dashboard</div>
@@ -396,6 +407,11 @@ Last Updated: July 7, 2025
 					<i>Data Scientist, Community Health Worker, and Advocate | Jan 2023 - Present</i></p2>
 				<ul>
 					<li>Gathered data, including geospatial (GIS) data, for grant applications to bring traffic solutions to the community.</li>
+					<li>Training younger workers, providing thought partnership, consultation, and support in 
+						presentation findings from a community needs assessment research funded by a state initiative, which 
+						recorded close to 300 entries from qualitative data from 250 community participants in four focus groups of 
+						various ages, races, and ethnicities.</li>
+					<li>Teaching and leading young associates in turning research findings into nonprofit evaluation tools and policy frameworks.</li>
 					<li>Acting as Coalition Community Health Worker and Advocate, 
 						partner with Contra Costa County Health Services to provide vital health education and 
 						outreach to low-income, priority populations in response to recent Tuberculosis outbreak in Richmond, CA.</li>
