@@ -153,7 +153,7 @@ body {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 1px;
+    grid-gap: 25px;
 }
 
 /* Style the Image Used to Trigger the Modal */
@@ -167,6 +167,20 @@ body {
 }
   
 #myImg:hover {
+    opacity: 0.7;
+    transform: scale(1.1)
+}
+
+#myImgH {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    object-fit: cover;
+    width: 150px;
+    height: 100px;
+}
+  
+#myImgH:hover {
     opacity: 0.7;
     transform: scale(1.1)
 }
